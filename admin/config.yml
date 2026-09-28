@@ -7,7 +7,7 @@
 
 backend:
   name: github
-  repo: yasna-palmeiro/heatschools
+  repo: HeatSchools/heatschools
   branch: main
   base_url: https://TU-WORKER.tu-subdominio.workers.dev   # <-- autenticador (Cloudflare Worker)
 
