@@ -6,10 +6,6 @@ title: Home
 permalink: /en/
 hero_title: "Making a *Silent Killer* Visible"
 hero_lead: "Catalysing policy action to protect school students' health and wellbeing from extreme heat in Latin America."
-badges:
-  - "Chile, Colombia and Peru"
-  - "Wellcome Climate Impacts Award"
-  - "2025–2028"
 about_title: "Why this research matters"
 about_body: |-
   Extreme heat is one of the most dangerous yet least visible consequences of climate change. For school-age children spending hours in inadequately ventilated classrooms, it poses a direct threat to their health, cognitive performance and wellbeing.
