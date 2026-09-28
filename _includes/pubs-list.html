@@ -1,0 +1,18 @@
+{% assign t = site.data.i18n[include.lang] %}
+{% assign pubs = site.publications | sort: "year" | reverse %}
+{% if pubs.size > 0 %}
+<ul class="pub-list">
+  {% for pub in pubs %}
+  <li class="pub">
+    {% if pub.type %}<span class="tag">{{ pub.type }}</span>{% endif %}
+    <p class="pub-title">{% if pub.link and pub.link != "" %}<a href="{{ pub.link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
+    <p class="pub-meta">{{ pub.authors }}{% if pub.year %} ({{ pub.year }}){% endif %}{% if pub.venue %}. <em>{{ pub.venue }}</em>{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="empty-state">
+  <p class="empty-title">{{ t.under_construction }}</p>
+  <p>{{ t.no_pubs }}</p>
+</div>
+{% endif %}

@@ -1,0 +1,22 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.i18n[lang] %}
+{% assign ref = page.ref | default: "home" %}
+{% assign key = "url_" | append: ref %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.layout == "home" %}{{ site.title }} · {{ t.tagline }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.hero_lead | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+<link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% unless page.collection %}{% for l in site.languages %}
+<link rel="alternate" hreflang="{{ l }}" href="{{ site.data.i18n[l][key] | absolute_url }}">{% endfor %}{% endunless %}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{% if page.layout == 'home' %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}">
+<meta property="og:description" content="{{ page.hero_lead | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 }}">
+<meta property="og:image" content="{{ page.image | default: '/assets/img/escuelascool-logo.png' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

@@ -1,21 +1,8 @@
-# HeatSchools — sitio web (trilingüe ES / EN / PT)
+# EscuelasCool — sitio web (trilingüe ES / EN / PT)
 
-Sitio web del proyecto **HeatSchools** (Wellcome Climate Impacts Award, 331072/Z/25/Z).
+Sitio web del proyecto **EscuelasCool** — *Making a Silent Killer Visible* (Wellcome Climate Impacts Award, 331072/Z/25/Z), publicado en **https://escuelascool.org**.
 
-Está hecho con **Jekyll** (que GitHub compila automáticamente, sin que instales nada) y un **editor visual** (Sveltia CMS) para que cualquier miembro del equipo pueda actualizar el contenido desde el navegador, sin escribir código. El sitio funciona en **tres idiomas** —español (por defecto), inglés y portugués— con un selector de idioma en la cabecera.
-
-Esta guía te lleva de cero a un sitio publicado en tu dominio `.org`, con editor visual funcionando. Sigue los pasos **en orden**. No necesitas saber programar; sí necesitas seguirlos con cuidado.
-
----
-
-## Cómo funciona lo multilingüe
-
-- El sitio abre en **español** en la raíz (`/`). El inglés vive bajo `/en/` y el portugués bajo `/pt/`.
-- En la cabecera hay un selector **ES · EN · PT** que lleva a la misma sección en el otro idioma.
-- No se usa ningún plugin especial: GitHub compila el sitio de forma **nativa**, sin GitHub Actions. Es la opción con menos piezas que se puedan romper.
-- Cada idioma tiene su propio contenido, que se edita por separado en el CMS (verás listas como *"Noticias · Español"*, *"News · English"*, *"Notícias · Português"*).
-
-> **Importante:** al traducir o añadir contenido, hazlo en las tres listas de idioma si quieres que aparezca en los tres. Las **publicaciones** son una sola lista común a los tres idiomas (los artículos no suelen traducirse).
+Está hecho con **Jekyll** (GitHub lo compila solo, sin instalar nada) y un **editor visual** (Sveltia CMS) en `/admin/` para que cualquier miembro del equipo actualice contenidos desde el navegador. El sitio abre en **español** (`/`), con **inglés** en `/en/` y **portugués** en `/pt/`, y un selector ES · EN · PT en la barra superior.
 
 ---
 
@@ -23,195 +10,106 @@ Esta guía te lleva de cero a un sitio publicado en tu dominio `.org`, con edito
 
 | Elemento | Para qué sirve |
 |---|---|
-| `index.md`, `en/index.md`, `pt/index.md` | Páginas de inicio (una por idioma). |
-| `equipo.html`, `en/team.html`, `pt/equipe.html` | Sección Equipo (plantillas). **No hace falta tocarlas.** |
-| `publicaciones.html`, `en/publications.html`, `pt/publicacoes.html` | Sección Publicaciones (plantillas). |
-| `noticias.html`, `en/news.html`, `pt/noticias.html` | Sección Noticias (plantillas). |
-| `_team/` | Fichas de equipo (cada archivo tiene un campo `lang`: es/en/pt). |
-| `_publications/` | Publicaciones (lista común). |
-| `_news_es/`, `_news_en/`, `_news_pt/` | Noticias por idioma. |
-| `_data/i18n.yml` | Textos de menús y botones en los tres idiomas. |
-| `_layouts/`, `_includes/`, `assets/` | Plantillas y estilos. **No hace falta tocarlos.** |
+| `index.md`, `en/index.md`, `pt/index.md` | Portada de cada idioma. Todo el texto (título, "por qué importa", cifras, líneas de investigación, contacto) está en la cabecera del archivo y se edita desde el CMS → **Portada**. |
+| `_data/project.yml` | Datos comunes a los tres idiomas: investigadora principal, correo, código Wellcome e **instituciones socias**. CMS → **Datos del proyecto**. |
+| `_data/i18n.yml` | Textos fijos de la interfaz (menú, botones, pie de página) en los tres idiomas. |
+| `_team/` | Fichas del equipo (campo `lang`: es/en/pt). CMS → **Equipo**. La página muestra "Página en construcción" hasta que en CMS → **Datos del proyecto** se active **Mostrar página de Equipo** (`show_team: true` en `_data/project.yml`). |
+| `_news_es/`, `_news_en/`, `_news_pt/` | Noticias por idioma. CMS → **Noticias**. |
+| `_publications/` | Publicaciones (lista común a los tres idiomas). CMS → **Publicaciones**. Mientras esté vacía se muestra "Página en construcción". |
+| `equipo.html`, `publicaciones.html`, `noticias.html` y sus equivalentes en `en/` y `pt/` | Páginas internas. Solo contienen el título y la frase de introducción. |
+| `_layouts/`, `_includes/`, `assets/css/`, `assets/js/` | Plantillas, estilos y el menú móvil. **No hace falta tocarlos.** |
+| `assets/img/` | Logo EscuelasCool, lápices de la barra superior, logo de Wellcome y favicon. |
+| `assets/uploads/` | Fotos e imágenes subidas desde el CMS. |
 | `admin/` | El editor visual (Sveltia CMS). |
-| `_config.yml` | Configuración general del sitio. |
+| `_config.yml`, `CNAME` | Configuración general y dominio. |
+
+> Ya **no** existe un `index.html` suelto en la raíz: la portada se genera desde `index.md` con el mismo diseño y colores de marca. Si alguien vuelve a subir un `index.html` a la raíz, reemplazará la portada trilingüe.
+
+### Identidad visual
+
+- Colores: azul marino `#023155`, azul `#0653A5`, cian `#05B5DC`, naranja `#F86601`, rojo `#B40B0E`, crema `#FAF7F2`, gris `#5B6770`.
+- Tipografías: **Nunito** (títulos) y **Source Sans 3** (texto).
+- La franja superior reproduce los 14 lápices del logo, del frío al calor.
 
 ---
 
-## Resumen de los pasos
+## Estado de la puesta en marcha
 
-1. Subir esta carpeta a un repositorio de GitHub.
-2. Activar GitHub Pages (publica el sitio gratis).
-3. Comprar el dominio `.org`.
-4. Conectar el dominio a GitHub.
-5. Rellenar `_config.yml` con tu dominio.
-6. Crear el "portero" de autenticación (una vez).
-7. Activar el editor visual (CMS).
+| Paso | Estado |
+|---|---|
+| 1. Repositorio `yasna-palmeiro/heatschools` en GitHub | ✅ |
+| 2. GitHub Pages activado (rama `main`, carpeta raíz) | ✅ |
+| 3–5. Dominio `escuelascool.org` conectado (`CNAME`, `url` en `_config.yml`) | ✅ |
+| 6. "Portero" de autenticación del CMS (Cloudflare Worker) | Pendiente |
+| 7. Poner la URL del Worker en `admin/config.yml` → `base_url` | Pendiente |
 
-Tras los pasos 1–2 ya tendrás el sitio online en una URL de GitHub. Los pasos 3–5 le ponen tu dominio propio. Los pasos 6–7 activan el editor para no-técnicos.
+### Paso 6 — Crear el "portero" de autenticación del editor (una sola vez)
 
----
+**6a. OAuth App en GitHub:** <https://github.com/settings/developers> → **OAuth Apps → New OAuth App**.
 
-## Paso 1 — Subir la carpeta a GitHub
+- **Application name:** `EscuelasCool CMS`
+- **Homepage URL:** `https://escuelascool.org`
+- **Authorization callback URL:** `https://TU-WORKER.workers.dev/callback` (provisional; se corrige en 6b).
 
-La forma más sencilla sin usar la línea de comandos es **GitHub Desktop**:
+Pulsa **Register application**, anota el **Client ID** y genera un **Client secret** (guárdalo: no se vuelve a mostrar).
 
-1. Descarga e instala **GitHub Desktop** desde <https://desktop.github.com> e inicia sesión con tu cuenta.
-2. Menú **File → New repository**:
-   - **Name:** `heatschools` (usa exactamente este nombre; el CMS lo espera).
-   - **Local path:** elige una ubicación. GitHub Desktop creará una carpeta `heatschools`.
-   - Pulsa **Create repository**.
-3. Abre esa carpeta `heatschools` recién creada y **copia dentro TODO el contenido** de esta carpeta `heatschools-web` (es decir, `index.md`, `_config.yml`, las carpetas `_team`, `_news_es`, `en`, `pt`, `admin`, etc.). El contenido debe quedar en la **raíz** del repositorio, no dentro de una subcarpeta.
-4. Vuelve a GitHub Desktop: verás los archivos como cambios. Abajo escribe un resumen (p. ej. *"Sitio inicial"*) y pulsa **Commit to main**.
-5. Arriba pulsa **Publish repository**. Desmarca *"Keep this code private"* (recomendado para un sitio web) y pulsa **Publish**.
+**6b. Worker en Cloudflare (gratis):** crea una cuenta en <https://dash.cloudflare.com>, abre <https://github.com/sveltia/sveltia-cms-auth> y usa su botón **Deploy to Cloudflare Workers**. Cuando pida variables de entorno, pega el Client ID y el Client secret. Cloudflare te dará una URL tipo `https://sveltia-cms-auth.TU-SUBDOMINIO.workers.dev`. Vuelve a la OAuth App y corrige el callback a esa URL + `/callback`.
 
-> Alternativa sin instalar nada: en <https://github.com/new> crea el repositorio `heatschools`, entra, pulsa **Add file → Upload files** y arrastra los archivos.
+### Paso 7 — Conectar el editor
 
----
-
-## Paso 2 — Activar GitHub Pages
-
-1. Ve a `https://github.com/TU_USUARIO/heatschools`.
-2. Pestaña **Settings** → menú lateral **Pages**.
-3. En **Build and deployment → Source** elige **Deploy from a branch**.
-4. En **Branch** selecciona `main` y carpeta `/ (root)`. Pulsa **Save**.
-5. Espera 1–2 minutos y recarga. Aparecerá el enlace: `https://TU_USUARIO.github.io/heatschools/`.
-
-(En esta URL provisional algunos estilos y enlaces pueden verse raros porque el sitio está configurado para tu dominio propio; se verá perfecto tras el paso 5.)
-
----
-
-## Paso 3 — Comprar el dominio `.org`
-
-Registradores recomendados por precio y sencillez:
-
-- **Cloudflare** (<https://dash.cloudflare.com>) — al coste, sin sobreprecios.
-- **Namecheap** (<https://www.namecheap.com>) — interfaz simple.
-- **Gandi** (<https://www.gandi.net>) — europeo, buen soporte.
-
-Busca el dominio (p. ej. `heatschools.org`) y complétalo. Coste aproximado: **10–15 € al año**.
-
----
-
-## Paso 4 — Conectar el dominio a GitHub
-
-**4a. En GitHub:** Repositorio → **Settings → Pages → Custom domain**. Escribe tu dominio (p. ej. `heatschools.org`) y **Save**. GitHub creará un archivo `CNAME` automáticamente.
-
-**4b. En tu registrador (panel DNS):** añade cuatro registros **A** para el dominio raíz:
-
-```
-A   @   185.199.108.153
-A   @   185.199.109.153
-A   @   185.199.110.153
-A   @   185.199.111.153
-```
-
-Y un registro para `www`:
-
-```
-CNAME   www   TU_USUARIO.github.io
-```
-
-**4c.** Vuelve a GitHub → **Settings → Pages**, espera a que verifique el dominio (de minutos a 24 h) y marca **Enforce HTTPS**.
-
----
-
-## Paso 5 — Poner tu dominio en la configuración
-
-Edita `_config.yml` (en GitHub: abre el archivo → icono del lápiz):
-
-```yaml
-url: "https://heatschools.org"    # <-- tu dominio real
-baseurl: ""                       # déjalo vacío
-```
-
-Guarda (**Commit changes**). En 1–2 minutos el sitio se recompila y se verá correctamente.
-
----
-
-## Paso 6 — Crear el "portero" de autenticación del editor
-
-El editor (`/admin/`) necesita un pequeño servicio gratuito para poder guardar cambios en GitHub. Se configura **una sola vez**.
-
-**6a. Crear una OAuth App en GitHub:**
-
-1. Ve a <https://github.com/settings/developers> → **OAuth Apps → New OAuth App**.
-2. Rellena:
-   - **Application name:** `HeatSchools CMS`
-   - **Homepage URL:** `https://TU_DOMINIO.org`
-   - **Authorization callback URL:** `https://TU-WORKER.workers.dev/callback` (valor provisional; lo ajustas tras 6b).
-3. **Register application.** Anota el **Client ID** y genera un **Client secret** (guárdalo, no se vuelve a mostrar).
-
-**6b. Desplegar el "portero" en Cloudflare (gratis):**
-
-1. Crea una cuenta gratuita en <https://dash.cloudflare.com>.
-2. Usa el proyecto oficial **sveltia-cms-auth**: <https://github.com/sveltia/sveltia-cms-auth>. Tiene un botón **Deploy to Cloudflare Workers**; síguelo.
-3. Cuando pida variables de entorno, pega el **Client ID** y el **Client secret** del paso 6a.
-4. Cloudflare te dará la URL del worker, algo como `https://sveltia-cms-auth.TU-SUBDOMINIO.workers.dev`.
-5. Vuelve a la OAuth App (6a) y corrige el **Authorization callback URL** a esa URL + `/callback`.
-
----
-
-## Paso 7 — Conectar el editor
-
-Edita `admin/config.yml` con tus valores reales:
-
-```yaml
-backend:
-  name: github
-  repo: TU_USUARIO/heatschools
-  branch: main
-  base_url: https://sveltia-cms-auth.TU-SUBDOMINIO.workers.dev
-```
-
-Guarda (**Commit changes**). Listo: entra en `https://TU_DOMINIO.org/admin/`, pulsa **Iniciar sesión con GitHub** y ya puedes editar.
+En `admin/config.yml` reemplaza solo la línea `base_url` por la URL de tu Worker (el `repo` ya está configurado). Guarda con **Commit changes** y entra en `https://escuelascool.org/admin/` → **Iniciar sesión con GitHub**.
 
 ---
 
 ## Uso diario — cómo edita el equipo
 
-1. Entra en `https://TU_DOMINIO.org/admin/` e inicia sesión con GitHub.
-2. Elige la lista según idioma y sección (p. ej. *"Noticias · Español"* o *"News · English"*).
-3. Para añadir algo nuevo pulsa **New**, rellena los campos y **Publish**.
-4. Los cambios se guardan en GitHub y el sitio se actualiza solo en 1–2 minutos.
+1. Entra en `https://escuelascool.org/admin/` e inicia sesión con GitHub.
+2. Elige la sección: **Portada**, **Datos del proyecto**, **Equipo**, **Publicaciones** o **Noticias** (cada una separada por idioma cuando corresponde).
+3. **New** para crear, rellena los campos y **Publish**. El sitio se actualiza solo en 1–2 minutos.
+4. Para que algo aparezca en los tres idiomas, créalo en las tres listas (p. ej. *Noticias · Español*, *News · English*, *Notícias · Português*).
 
-No hay que tocar HTML ni archivos: todo son formularios. Recuerda repetir la entrada en cada idioma que quieras cubrir.
+En el título principal de la portada, la parte entre asteriscos (`*amenaza silenciosa*`) aparece en naranja y cursiva.
 
----
+### Dar acceso a colaboradores
 
-## Dar acceso a colaboradores (equipo y estudiantes)
-
-1. Cada persona necesita una cuenta de GitHub (gratuita).
-2. Repositorio → **Settings → Collaborators → Add people** → escribe su usuario.
-3. Dale rol **Write**. Con eso podrá entrar al `/admin/` y editar. Para revocar, quítala de esa lista.
+Cada persona necesita una cuenta de GitHub. Repositorio → **Settings → Collaborators → Add people** → rol **Write**. Con eso podrá entrar a `/admin/`. Para revocar, quítala de esa lista.
 
 ---
 
-## Próximo paso previsto: dashboard de políticas (WP1)
+## Repositorio privado
 
-Está previsto añadir un **panel interactivo con las políticas recabadas en el análisis de políticas (WP1)**. El enfoque planificado:
+El **código** del repositorio puede ser privado, pero el **sitio publicado** en escuelascool.org seguirá siendo público (que es lo que se quiere). La limitación es de plan: con la cuenta gratuita de GitHub, GitHub Pages solo funciona en repositorios públicos; para publicar desde un repositorio privado hace falta GitHub Pro, Team o Enterprise.
 
-- El análisis en R exporta la base de políticas a un archivo **CSV** (o se mantiene en una Google Sheet).
-- Una nueva página del sitio (p. ej. `/politicas/`) leerá ese archivo y mostrará una **tabla interactiva filtrable** (por país, tipo de política, sector, año…) más gráficos o un mapa.
-- Al actualizar el CSV, el panel se actualiza solo.
+> ⚠️ **No cambies el repositorio a privado con la cuenta gratuita**: el sitio dejaría de publicarse. Primero consigue el plan, después cambia la visibilidad.
 
-Se montará cuando la estructura de datos de WP1 esté definida, para ajustarlo a las columnas reales.
+Opciones:
+
+1. **GitHub Education (gratis, recomendado si calificas):** el personal docente o investigador de una institución acreditada puede solicitar **GitHub Team gratuito** en <https://education.github.com>. GitHub Team funciona con una *organización*, así que: (a) crea una organización (p. ej. `escuelascool`), (b) transfiere el repositorio (**Settings → General → Transfer ownership**), (c) actualiza `repo:` en `admin/config.yml` a `escuelascool/heatschools`, y (d) revisa en **Settings → Pages** que el dominio siga configurado.
+2. **GitHub Pro en tu cuenta personal (de pago):** <https://github.com/settings/billing>. No hay que mover nada.
+3. **Cloudflare Pages (gratis):** conecta el repositorio privado a Cloudflare Pages y publica desde allí (comando de compilación `jekyll build`, carpeta `_site`). Requiere mover el dominio de GitHub Pages a Cloudflare, así que tiene más pasos.
+
+Con cualquiera de las opciones, una vez activo el plan: **Settings → General → Danger Zone → Change repository visibility → Make private**. El CMS sigue funcionando con repositorios privados; los colaboradores deben estar invitados al repositorio.
+
+---
+
+## Próximo paso previsto: panel de políticas (WP1)
+
+Se añadirá una página (p. ej. `/politicas/`) que lea la base de políticas exportada desde R (CSV) y muestre una tabla filtrable (país, tipo de política, sector, año) con gráficos o mapa. Se montará cuando la estructura de datos de WP1 esté definida.
 
 ---
 
 ## Solución de problemas
 
-- **El sitio no aparece / 404:** revisa Paso 2 (rama `main`, carpeta root). Espera 1–2 min tras cada cambio.
-- **Se ve sin estilos o los enlaces fallan:** falta el Paso 5 (`url` correcto y `baseurl` vacío) o el dominio aún no propaga.
-- **El `/admin/` no deja iniciar sesión:** revisa Pasos 6–7 (Client ID/secret, callback con `/callback`, `base_url` en `admin/config.yml`).
-- **Falta un idioma en el menú de un contenido:** recuerda crear la entrada en cada lista de idioma.
-
----
+- **404 o el sitio no aparece:** revisa **Settings → Pages** (rama `main`, carpeta raíz). Espera 1–2 min tras cada cambio.
+- **Se ve sin estilos:** revisa que `_config.yml` tenga `url: "https://escuelascool.org"` y `baseurl: ""`.
+- **`/admin/` no deja iniciar sesión:** revisa los pasos 6–7 (Client ID/secret, callback con `/callback`, `base_url`).
+- **Falta un contenido en un idioma:** créalo también en la lista de ese idioma.
 
 ## Coste anual estimado
 
 | Concepto | Coste |
 |---|---|
-| Hosting (GitHub Pages) | Gratis |
+| Hosting (GitHub Pages, repositorio público) | Gratis |
 | Editor visual + autenticación (Cloudflare Workers) | Gratis |
 | Dominio `.org` | ~10–15 € / año |
-| **Total** | **~10–15 € / año** |
+| Repositorio privado | Gratis con GitHub Education; de pago con GitHub Pro |

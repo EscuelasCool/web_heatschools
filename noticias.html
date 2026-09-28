@@ -4,20 +4,6 @@ lang: es
 ref: news
 title: Noticias
 permalink: /noticias/
+intro: "Novedades, hitos y actividades del proyecto."
 ---
-{% assign t = site.data.i18n[page.lang] %}
-<h1>{{ t.nav_news }}</h1>
-<p class="muted">{{ t.news_intro }}</p>
-
-<div class="section">
-  {% assign items = site.news_es | sort: "date" | reverse %}
-  {% for post in items %}
-  <div class="news-item">
-    <p class="post-meta">{{ post.date | date: "%-d/%m/%Y" }}{% if post.author %} · {{ post.author }}{% endif %}</p>
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    <a href="{{ post.url | relative_url }}">{{ t.read_more }}</a>
-  </div>
-  {% endfor %}
-  {% if items.size == 0 %}<p class="muted">{{ t.no_news }}</p>{% endif %}
-</div>
+{% include news-list.html lang=page.lang limit=100 %}

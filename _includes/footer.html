@@ -1,15 +1,22 @@
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.data.i18n[lang] %}
+{% assign p = site.data.project %}
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <strong>{{ site.title }}</strong><br>
-      {{ site.tagline }}
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="{{ t.url_home | relative_url }}">
+        <img src="{{ '/assets/img/escuelascool-pencils.png' | relative_url }}" alt="" width="84" height="38">
+        <span class="brand-name">EscuelasCool</span>
+      </a>
+      <p>{{ t.tagline }}</p>
     </div>
     <div class="footer-meta">
-      <p>{{ t.footer_meta1 }}</p>
-      <p>{{ t.footer_meta2 }}</p>
-      <p>© {{ site.time | date: "%Y" }} HeatSchools</p>
+      <p>{{ t.footer_funded }}, {{ p.grant }}</p>
+      <p>{{ t.footer_host }}: {{ p.host }}</p>
+      <p>© {{ site.time | date: "%Y" }} EscuelasCool · #EscuelasCool</p>
     </div>
+    <a class="footer-wellcome" href="https://wellcome.org" rel="noopener">
+      <img src="{{ '/assets/img/wellcome-funded.png' | relative_url }}" alt="{{ t.funded_alt }}" width="62" height="73">
+    </a>
   </div>
 </footer>

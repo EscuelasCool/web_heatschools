@@ -4,20 +4,6 @@ lang: en
 ref: team
 title: Team
 permalink: /en/team/
+intro: "Researchers and collaborators of the EscuelasCool project."
 ---
-{% assign t = site.data.i18n[page.lang] %}
-<h1>{{ t.nav_team }}</h1>
-<p class="muted">{{ t.team_intro }}</p>
-
-<div class="grid grid-3 section">
-  {% assign people = site.team | where: "lang", page.lang | sort: "order" %}
-  {% for person in people %}
-  <div class="card person">
-    {% if person.photo and person.photo != "" %}<img src="{{ person.photo | relative_url }}" alt="{{ person.name }}">{% endif %}
-    <h3>{{ person.name }}</h3>
-    <p class="role">{{ person.role }}</p>
-    <p class="aff">{{ person.affiliation }}</p>
-    {% if person.link and person.link != "" %}<p><a href="{{ person.link }}">→</a></p>{% endif %}
-  </div>
-  {% endfor %}
-</div>
+{% include team-grid.html lang=page.lang %}

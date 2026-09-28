@@ -4,21 +4,6 @@ lang: pt
 ref: pubs
 title: Publicações
 permalink: /pt/publicacoes/
+intro: "Artigos, relatórios, dados e outros produtos do projeto."
 ---
-{% assign t = site.data.i18n[page.lang] %}
-<h1>{{ t.nav_pubs }}</h1>
-<p class="muted">{{ t.pubs_intro }}</p>
-
-<div class="section">
-  {% assign pubs = site.publications | sort: "year" | reverse %}
-  {% for pub in pubs %}
-  <div class="pub">
-    {% if pub.type %}<span class="tag">{{ pub.type }}</span>{% endif %}
-    <div class="pub-title">
-      {% if pub.link and pub.link != "" %}<a href="{{ pub.link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
-    </div>
-    <div class="pub-meta">{{ pub.authors }}{% if pub.year %} · {{ pub.year }}{% endif %}{% if pub.venue %} · <em>{{ pub.venue }}</em>{% endif %}</div>
-  </div>
-  {% endfor %}
-  {% if pubs.size == 0 %}<p class="muted">{{ t.no_pubs }}</p>{% endif %}
-</div>
+{% include pubs-list.html lang=page.lang %}

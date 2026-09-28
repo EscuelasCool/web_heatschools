@@ -1,0 +1,27 @@
+{% assign t = site.data.i18n[include.lang] %}
+{% if site.data.project.show_team %}
+{% assign people = site.team | where: "lang", include.lang | sort: "order" %}
+<ul class="team-grid">
+  {% for person in people %}
+  <li class="person">
+    {% if person.photo and person.photo != "" %}
+      <img class="avatar" src="{{ person.photo | relative_url }}" alt="" width="96" height="96" loading="lazy">
+    {% else %}
+      {% assign clean = person.name | remove: "Dra. " | remove: "Dr. " | remove: "Dr " %}
+      {% assign parts = clean | split: " " %}
+      <span class="avatar avatar--initials" aria-hidden="true">{{ parts[0] | slice: 0 }}{{ parts[1] | slice: 0 }}</span>
+    {% endif %}
+    <h3>{{ person.name }}</h3>
+    <p class="role">{{ person.role }}</p>
+    <p class="aff">{{ person.affiliation }}</p>
+    {% if person.link and person.link != "" %}<a class="text-link" href="{{ person.link }}">{{ t.profile }}<span class="sr-only">: {{ person.name }}</span></a>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<p class="note">{{ t.team_more }}</p>
+{% else %}
+<div class="empty-state">
+  <p class="empty-title">{{ t.under_construction }}</p>
+  <p>{{ t.team_soon }}</p>
+</div>
+{% endif %}

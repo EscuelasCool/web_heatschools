@@ -1,60 +1,147 @@
 # ============================================================
-#  Configuración del CMS visual (Sveltia / Decap) — trilingüe
-#  Reemplaza TU_USUARIO y TU-WORKER por tus valores reales.
-#  Ver la guía en README.md (secciones 6 y 7).
+#  Configuración del CMS visual (Sveltia) — EscuelasCool, trilingüe
+#  Editor en https://escuelascool.org/admin/
+#  Falta solo reemplazar base_url por la URL de tu Cloudflare Worker
+#  (ver README, pasos 6 y 7).
 # ============================================================
 
 backend:
   name: github
-  repo: TU_USUARIO/heatschools      # <-- tu_usuario_de_github/nombre_del_repositorio
+  repo: yasna-palmeiro/heatschools
   branch: main
-  base_url: https://TU-WORKER.tu-subdominio.workers.dev   # autenticador (Cloudflare Worker)
+  base_url: https://TU-WORKER.tu-subdominio.workers.dev   # <-- autenticador (Cloudflare Worker)
 
+site_url: https://escuelascool.org
 locale: es
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  # ---------- Páginas de inicio (una por idioma) ----------
+  # ---------- Portadas (una por idioma) ----------
   - name: inicio
-    label: "Inicio (páginas)"
+    label: "Portada"
     files:
       - name: inicio_es
-        label: "Inicio · Español"
+        label: "Portada · Español"
         file: "index.md"
         fields:
           - { label: Layout, name: layout, widget: hidden, default: home }
           - { label: Idioma, name: lang, widget: hidden, default: es }
           - { label: Ref, name: ref, widget: hidden, default: home }
-          - { label: Título interno, name: title, widget: hidden, default: Inicio }
-          - { label: Permalink, name: permalink, widget: hidden, default: / }
-          - { label: "Título principal", name: hero_title, widget: string }
+          - { label: Título interno, name: title, widget: hidden, default: "Inicio" }
+          - { label: Permalink, name: permalink, widget: hidden, default: "/" }
+          - { label: "Título principal", name: hero_title, widget: string, hint: "Pon entre asteriscos la parte que va en naranja y cursiva, p. ej. *amenaza silenciosa*" }
           - { label: "Frase de entrada", name: hero_lead, widget: text }
-          - { label: "Contenido", name: body, widget: markdown }
+          - { label: "Etiquetas bajo el título", name: badges, widget: list, field: { label: "Etiqueta", name: badge, widget: string } }
+          - { label: "Sobre el proyecto: título", name: about_title, widget: string }
+          - { label: "Sobre el proyecto: texto", name: about_body, widget: markdown }
+          - label: "Cifras destacadas"
+            name: stats
+            widget: list
+            summary: "{{fields.num}} {{fields.label}}"
+            fields:
+              - { label: "Cifra", name: num, widget: string }
+              - { label: "Texto", name: label, widget: string }
+          - { label: "Investigación: título", name: research_title, widget: string }
+          - label: "Líneas de investigación"
+            name: research_lines
+            widget: list
+            summary: "{{fields.icon}} {{fields.title}}"
+            fields:
+              - { label: "Emoji", name: icon, widget: string, required: false }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Texto", name: text, widget: text }
+          - { label: "Contacto: título", name: contact_title, widget: string }
+          - { label: "Contacto: texto", name: contact_text, widget: text }
+          - { label: "Contenido adicional (opcional, al final de la portada)", name: body, widget: markdown, required: false }
       - name: inicio_en
         label: "Home · English"
         file: "en/index.md"
         fields:
           - { label: Layout, name: layout, widget: hidden, default: home }
-          - { label: Language, name: lang, widget: hidden, default: en }
+          - { label: Idioma, name: lang, widget: hidden, default: en }
           - { label: Ref, name: ref, widget: hidden, default: home }
-          - { label: Internal title, name: title, widget: hidden, default: Home }
-          - { label: Permalink, name: permalink, widget: hidden, default: /en/ }
-          - { label: "Main title", name: hero_title, widget: string }
+          - { label: Título interno, name: title, widget: hidden, default: "Home" }
+          - { label: Permalink, name: permalink, widget: hidden, default: "/en/" }
+          - { label: "Main title", name: hero_title, widget: string, hint: "Wrap the orange italic part in asterisks, e.g. *Silent Killer*" }
           - { label: "Lead sentence", name: hero_lead, widget: text }
-          - { label: "Content", name: body, widget: markdown }
+          - { label: "Tags under the title", name: badges, widget: list, field: { label: "Tag", name: badge, widget: string } }
+          - { label: "About: title", name: about_title, widget: string }
+          - { label: "About: text", name: about_body, widget: markdown }
+          - label: "Key figures"
+            name: stats
+            widget: list
+            summary: "{{fields.num}} {{fields.label}}"
+            fields:
+              - { label: "Figure", name: num, widget: string }
+              - { label: "Text", name: label, widget: string }
+          - { label: "Research: title", name: research_title, widget: string }
+          - label: "Research lines"
+            name: research_lines
+            widget: list
+            summary: "{{fields.icon}} {{fields.title}}"
+            fields:
+              - { label: "Emoji", name: icon, widget: string, required: false }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: text, widget: text }
+          - { label: "Contact: title", name: contact_title, widget: string }
+          - { label: "Contact: text", name: contact_text, widget: text }
+          - { label: "Extra content (optional, end of home page)", name: body, widget: markdown, required: false }
       - name: inicio_pt
-        label: "Início · Português"
+        label: "Página inicial · Português"
         file: "pt/index.md"
         fields:
           - { label: Layout, name: layout, widget: hidden, default: home }
           - { label: Idioma, name: lang, widget: hidden, default: pt }
           - { label: Ref, name: ref, widget: hidden, default: home }
-          - { label: Título interno, name: title, widget: hidden, default: Início }
-          - { label: Permalink, name: permalink, widget: hidden, default: /pt/ }
-          - { label: "Título principal", name: hero_title, widget: string }
-          - { label: "Frase de entrada", name: hero_lead, widget: text }
-          - { label: "Conteúdo", name: body, widget: markdown }
+          - { label: Título interno, name: title, widget: hidden, default: "Início" }
+          - { label: Permalink, name: permalink, widget: hidden, default: "/pt/" }
+          - { label: "Título principal", name: hero_title, widget: string, hint: "Coloque entre asteriscos a parte em laranja e itálico, p. ex. *ameaça silenciosa*" }
+          - { label: "Frase de abertura", name: hero_lead, widget: text }
+          - { label: "Etiquetas sob o título", name: badges, widget: list, field: { label: "Etiqueta", name: badge, widget: string } }
+          - { label: "Sobre o projeto: título", name: about_title, widget: string }
+          - { label: "Sobre o projeto: texto", name: about_body, widget: markdown }
+          - label: "Números em destaque"
+            name: stats
+            widget: list
+            summary: "{{fields.num}} {{fields.label}}"
+            fields:
+              - { label: "Número", name: num, widget: string }
+              - { label: "Texto", name: label, widget: string }
+          - { label: "Pesquisa: título", name: research_title, widget: string }
+          - label: "Linhas de pesquisa"
+            name: research_lines
+            widget: list
+            summary: "{{fields.icon}} {{fields.title}}"
+            fields:
+              - { label: "Emoji", name: icon, widget: string, required: false }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Texto", name: text, widget: text }
+          - { label: "Contato: título", name: contact_title, widget: string }
+          - { label: "Contato: texto", name: contact_text, widget: text }
+          - { label: "Conteúdo adicional (opcional, final da página inicial)", name: body, widget: markdown, required: false }
+
+  # ---------- Datos comunes (contacto e instituciones) ----------
+  - name: datos
+    label: "Datos del proyecto"
+    files:
+      - name: proyecto
+        label: "Contacto, financiamiento e instituciones"
+        file: "_data/project.yml"
+        fields:
+          - { label: "Investigadora principal", name: pi_name, widget: string }
+          - { label: "Correo de contacto", name: email, widget: string }
+          - { label: "Código Wellcome", name: grant, widget: string }
+          - { label: "Institución anfitriona", name: host, widget: string }
+          - { label: "Mostrar página de Equipo", name: show_team, widget: boolean, default: false, hint: "Desactivado = la página Equipo muestra 'Página en construcción'. Actívalo cuando estén todas las fichas." }
+          - label: "Instituciones socias"
+            name: partners
+            widget: list
+            summary: "{{fields.name}} ({{fields.country}})"
+            fields:
+              - { label: "Nombre", name: name, widget: string }
+              - { label: "País", name: country, widget: select, options: ["PE", "CL", "CO", "BR", "INT"], hint: "INT = regional / internacional" }
+              - { label: "Sitio web", name: link, widget: string, required: false }
 
   # ---------- Equipo (una lista por idioma; misma carpeta, filtrada) ----------
   - name: equipo_es

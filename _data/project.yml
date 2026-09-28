@@ -1,0 +1,31 @@
+# ============================================================
+#  Datos comunes a los tres idiomas (contacto, financiamiento,
+#  instituciones). Editable desde el CMS: "Datos del proyecto".
+# ============================================================
+
+pi_name: "Yasna Palmeiro-Silva"
+email: "ypalmeiro@uc.cl"
+grant: "331072/Z/25/Z"
+host: "Universidad Peruana Cayetano Heredia"
+
+# Página de Equipo: false = muestra "Página en construcción".
+# Cambia a true cuando estén listas las fichas de todo el equipo.
+show_team: false
+
+# Instituciones socias. "country" usa un código: PE, CL, CO, BR, INT (regional).
+partners:
+  - name: "Universidad Peruana Cayetano Heredia"
+    country: "PE"
+    link: "https://www.cayetano.edu.pe"
+  - name: "Pontificia Universidad Católica de Chile"
+    country: "CL"
+    link: "https://www.uc.cl"
+  - name: "Universidad de los Andes"
+    country: "CO"
+    link: "https://uniandes.edu.co"
+  - name: "Corporación Ciudades"
+    country: "CL"
+    link: ""
+  - name: "MICROB-R"
+    country: "INT"
+    link: ""

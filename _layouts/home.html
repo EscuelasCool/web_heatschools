@@ -1,26 +1,101 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.default_lang }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }} · {{ site.tagline }}</title>
-  <meta name="description" content="{{ page.hero_lead | default: site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
-  {% assign lang = page.lang | default: site.default_lang %}
-  {% assign t = site.data.i18n[lang] %}
-  {% include header.html %}
-  <section class="hero">
-    <div class="container">
-      <h1>{{ page.hero_title | default: site.tagline }}</h1>
-      <p class="lead">{{ page.hero_lead | default: site.description }}</p>
-      <a class="btn" href="{{ t.url_news | relative_url }}">{{ t.latest_news }}</a>
+---
+layout: base
+---
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.i18n[lang] %}
+{% assign p = site.data.project %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <img class="hero-logo" src="{{ '/assets/img/escuelascool-logo.png' | relative_url }}" alt="{{ t.logo_alt }}" width="600" height="375">
+    <div class="hero-copy">
+      <h1 class="hero-title">{{ page.hero_title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h1>
+      <p class="hero-lead">{{ page.hero_lead }}</p>
+      {% if page.badges %}
+      <ul class="badges">{% for b in page.badges %}<li>{{ b }}</li>{% endfor %}</ul>
+      {% endif %}
     </div>
-  </section>
-  <main class="container">
-    {{ content }}
-  </main>
-  {% include footer.html %}
-</body>
-</html>
+  </div>
+</section>
+
+<section class="band" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <p class="eyebrow">{{ t.label_about }}</p>
+    <div class="about-grid">
+      <div class="prose">
+        <h2 id="about-title">{{ page.about_title }}</h2>
+        {{ page.about_body | markdownify }}
+      </div>
+      {% if page.stats %}
+      <ul class="stats">
+        {% for s in page.stats %}
+        <li class="stat"><span class="stat-num">{{ s.num }}</span><span class="stat-label">{{ s.label }}</span></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="band band--mist" id="research" aria-labelledby="research-title">
+  <div class="container">
+    <p class="eyebrow">{{ t.label_research }}</p>
+    <h2 id="research-title">{{ page.research_title }}</h2>
+    <ul class="lines-grid">
+      {% for line in page.research_lines %}
+      <li class="line-card">
+        {% if line.icon %}<span class="line-icon" aria-hidden="true">{{ line.icon }}</span>{% endif %}
+        <h3>{{ line.title }}</h3>
+        <p>{{ line.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="news" aria-labelledby="news-title">
+  <div class="container">
+    <p class="eyebrow">{{ t.label_news }}</p>
+    <div class="section-head">
+      <h2 id="news-title">{{ t.latest_news }}</h2>
+      <a class="text-link" href="{{ t.url_news | relative_url }}">{{ t.all_news }}</a>
+    </div>
+    {% include news-list.html lang=lang limit=3 %}
+  </div>
+</section>
+
+<section class="band band--cream" id="partners" aria-labelledby="partners-title">
+  <div class="container">
+    <p class="eyebrow">{{ t.label_partners }}</p>
+    <h2 id="partners-title">{{ t.partners_title }}</h2>
+    <ul class="partners">
+      {% for inst in p.partners %}
+      {% assign ck = "country_" | append: inst.country %}
+      <li>
+        {% if inst.link and inst.link != "" %}<a href="{{ inst.link }}" rel="noopener">{{ inst.name }}</a>{% else %}<span class="partner-name">{{ inst.name }}</span>{% endif %}
+        <span class="partner-country">{{ t[ck] | default: inst.country }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <p class="eyebrow eyebrow--light">{{ t.label_contact }}</p>
+        <h2 id="contact-title">{{ page.contact_title }}</h2>
+        <p>{{ page.contact_text }}</p>
+      </div>
+      <dl class="contact-info">
+        <div><dt>{{ t.pi_label }}</dt><dd>{{ p.pi_name }}</dd></div>
+        <div><dt>{{ t.email_label }}</dt><dd><a href="mailto:{{ p.email }}">{{ p.email }}</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+{% assign extra = content | strip %}{% if extra != "" %}
+<section class="band"><div class="container prose">{{ extra }}</div></section>
+{% endif %}

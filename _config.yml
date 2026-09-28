@@ -1,10 +1,9 @@
 # ============================================================
-#  Configuración del sitio HeatSchools (trilingüe ES/EN/PT)
+#  Configuración del sitio EscuelasCool (trilingüe ES/EN/PT)
 #  Edita los valores con cuidado (respeta los espacios).
 # ============================================================
 
-title: "HeatSchools"
-tagline: "Protegiendo la salud escolar frente al calor extremo en América Latina"
+title: "EscuelasCool"
 description: >-
   Proyecto de investigación financiado por el Wellcome Climate Impacts Award
   para hacer visible el impacto del calor extremo en la salud y el bienestar
@@ -14,10 +13,8 @@ description: >-
 languages: ["es", "en", "pt"]
 default_lang: "es"
 
-# URL del sitio. Pon aquí tu dominio .org cuando lo tengas.
-# Ejemplo:  url: "https://heatschools.org"
+# Dominio propio. Con dominio propio, baseurl debe quedar VACÍO.
 url: "https://escuelascool.org"
-# Con dominio propio, baseurl debe quedar VACÍO. No lo cambies.
 baseurl: ""
 
 # --- Colecciones ---
@@ -51,6 +48,7 @@ defaults:
 markdown: kramdown
 exclude:
   - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
   - vendor

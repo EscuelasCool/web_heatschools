@@ -4,36 +4,46 @@ lang: en
 ref: home
 title: Home
 permalink: /en/
-hero_title: "Making a silent killer visible"
-hero_lead: "Catalysing policy action to protect school students' health and wellbeing from extreme heat amidst a changing climate in Latin America."
+hero_title: "Making a *Silent Killer* Visible"
+hero_lead: "Catalysing policy action to protect school students' health and wellbeing from extreme heat in Latin America."
+badges:
+  - "Chile, Colombia and Peru"
+  - "Wellcome Climate Impacts Award"
+  - "2025–2028"
+about_title: "Why this research matters"
+about_body: |-
+  Extreme heat is one of the most dangerous yet least visible consequences of climate change. For school-age children spending hours in inadequately ventilated classrooms, it poses a direct threat to their health, cognitive performance and wellbeing.
+
+  This project brings together researchers, civil society organisations and health advocates from across Latin America to understand the scale of the problem and generate evidence that drives concrete policy change.
+
+  We work across Chile, Colombia and Peru —countries facing rapid warming trends— to build a regional picture of heat exposure in schools and develop practical, policy-ready recommendations.
+stats:
+  - num: "3"
+    label: "Countries: Chile, Colombia and Peru"
+  - num: "5"
+    label: "Partner institutions across the region"
+  - num: "∞"
+    label: "Students we aim to protect"
+research_title: "What we are investigating"
+research_lines:
+  - icon: "🌡️"
+    title: "Heat exposure measurement"
+    text: "Documenting temperature conditions inside classrooms across different contexts and socioeconomic settings in the region."
+  - icon: "🧠"
+    title: "Health and cognitive impacts"
+    text: "Assessing how extreme heat affects students' physical health, mental wellbeing and learning capacity."
+  - icon: "⚖️"
+    title: "Policy landscape analysis"
+    text: "Mapping existing regulations, gaps and opportunities for heat-related school health policy in Chile, Colombia and Peru."
+  - icon: "🏘️"
+    title: "Equity and vulnerability"
+    text: "Understanding which communities and schools are most at risk, with a focus on socioeconomic disparities."
+  - icon: "📢"
+    title: "Knowledge translation"
+    text: "Transforming research evidence into accessible materials for policymakers, educators and the public."
+  - icon: "🤝"
+    title: "Policy engagement"
+    text: "Working with governments and civil society to turn evidence into protective policies for school communities."
+contact_title: "Interested in this research?"
+contact_text: "Whether you are a researcher, policymaker, journalist or simply curious, we would love to hear from you."
 ---
-
-## The project
-
-**HeatSchools** is a research project funded by the **Wellcome Climate Impacts Award** (331072/Z/25/Z) that examines how extreme heat affects the health, wellbeing and learning of school students in Latin America, and how to translate that evidence into public policies that protect children and adolescents.
-
-Extreme heat is a growing and often invisible climate risk in the school environment. HeatSchools combines exposure mapping, cohort studies, qualitative research, communication and policy co-design to close the gap between evidence and action.
-
-## Objectives
-
-<div class="goal"><span class="n">01.</span> Establish a baseline of existing policies on heat and schools in the region (WP1).</div>
-
-<div class="goal"><span class="n">02.</span> Map heat exposure in school settings using environmental and remote-sensing data (WP2.1).</div>
-
-<div class="goal"><span class="n">03.</span> Assess the relationship between heat, cognition and student wellbeing through a cohort study (WP2.2) and qualitative research (WP3).</div>
-
-<div class="goal"><span class="n">04.</span> Communicate the evidence accessibly to school communities and decision-makers (WP4).</div>
-
-<div class="goal"><span class="n">05.</span> Co-develop public policy recommendations with health and education authorities (WP5).</div>
-
-## Where we work
-
-The project brings together institutions from four Latin American countries —**Peru**, **Chile**, **Colombia**— with international collaboration, coordinated around Universidad Peruana Cayetano Heredia (UPCH) in Lima.
-
-<div class="grid grid-3 section">
-  <div class="card"><h3>Peru</h3><p class="muted">UPCH — host institution and coordination.</p></div>
-  <div class="card"><h3>Chile</h3><p class="muted">UChile, MICROBR and Corporación Ciudades.</p></div>
-  <div class="card"><h3>Colombia</h3><p class="muted">Universidad de los Andes.</p></div>
-</div>
-
-<p class="muted">Duration: 36 months (2026–2029). Funded by Wellcome. Host institution: Universidad Peruana Cayetano Heredia.</p>

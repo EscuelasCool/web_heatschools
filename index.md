@@ -4,36 +4,46 @@ lang: es
 ref: home
 title: Inicio
 permalink: /
-hero_title: "Hacer visible a un asesino silencioso"
-hero_lead: "Catalizar la acción política para proteger la salud y el bienestar del estudiantado frente al calor extremo en un clima cambiante en América Latina."
+hero_title: "Hacer visible una *amenaza silenciosa*"
+hero_lead: "Catalizando acción política para proteger la salud y el bienestar de los estudiantes frente al calor extremo en América Latina."
+badges:
+  - "Chile, Colombia y Perú"
+  - "Wellcome Climate Impacts Award"
+  - "2025–2028"
+about_title: "Por qué importa esta investigación"
+about_body: |-
+  El calor extremo es una de las consecuencias más peligrosas y menos visibles del cambio climático. Para niños y niñas en edad escolar que pasan horas en aulas mal ventiladas, representa una amenaza directa para su salud, rendimiento cognitivo y bienestar.
+
+  Este proyecto reúne investigadores, organizaciones de la sociedad civil y defensores de la salud de América Latina para entender la magnitud del problema y generar evidencia que impulse cambios de política concretos.
+
+  Trabajamos en Chile, Colombia y Perú —países que enfrentan tendencias aceleradas de calentamiento— para construir un panorama regional de la exposición al calor en las escuelas y desarrollar recomendaciones prácticas listas para la política pública.
+stats:
+  - num: "3"
+    label: "Países: Chile, Colombia y Perú"
+  - num: "5"
+    label: "Instituciones socias en la región"
+  - num: "∞"
+    label: "Estudiantes que buscamos proteger"
+research_title: "Qué investigamos"
+research_lines:
+  - icon: "🌡️"
+    title: "Medición de exposición al calor"
+    text: "Documentando las condiciones de temperatura dentro de las aulas en distintos contextos y niveles socioeconómicos de la región."
+  - icon: "🧠"
+    title: "Impactos en salud y cognición"
+    text: "Evaluando cómo el calor extremo afecta la salud física, el bienestar mental y la capacidad de aprendizaje de los estudiantes."
+  - icon: "⚖️"
+    title: "Análisis del panorama de políticas"
+    text: "Mapeo de regulaciones existentes, brechas y oportunidades para políticas de salud escolar frente al calor en Chile, Colombia y Perú."
+  - icon: "🏘️"
+    title: "Equidad y vulnerabilidad"
+    text: "Entendiendo qué comunidades y escuelas están en mayor riesgo, con foco en las disparidades socioeconómicas."
+  - icon: "📢"
+    title: "Traducción del conocimiento"
+    text: "Transformando evidencia de investigación en materiales accesibles para tomadores de decisiones, educadores y el público."
+  - icon: "🤝"
+    title: "Incidencia en políticas"
+    text: "Trabajando con gobiernos y sociedad civil para convertir la evidencia en políticas protectoras para las comunidades escolares."
+contact_title: "¿Te interesa esta investigación?"
+contact_text: "Seas investigador, tomador de decisiones, periodista o simplemente tienes curiosidad, nos encantaría escucharte."
 ---
-
-## El proyecto
-
-**HeatSchools** es un proyecto de investigación financiado por el **Wellcome Climate Impacts Award** (331072/Z/25/Z) que estudia cómo el calor extremo afecta la salud, el bienestar y el aprendizaje del estudiantado en escuelas de América Latina, y cómo traducir esa evidencia en políticas públicas que protejan a niñas, niños y adolescentes.
-
-El calor extremo es un riesgo climático creciente y, con frecuencia, invisible en el entorno escolar. HeatSchools combina mapeo de exposición, estudios de cohorte, investigación cualitativa, comunicación y co-diseño de políticas para cerrar la brecha entre la evidencia y la acción.
-
-## Objetivos
-
-<div class="goal"><span class="n">01.</span> Establecer una línea de base de las políticas existentes sobre calor y escuelas en la región (WP1).</div>
-
-<div class="goal"><span class="n">02.</span> Mapear la exposición al calor en entornos escolares mediante datos ambientales y de teledetección (WP2.1).</div>
-
-<div class="goal"><span class="n">03.</span> Evaluar la relación entre calor, cognición y bienestar del estudiantado mediante un estudio de cohorte (WP2.2) e investigación cualitativa (WP3).</div>
-
-<div class="goal"><span class="n">04.</span> Comunicar la evidencia de forma accesible a comunidades escolares y tomadores de decisión (WP4).</div>
-
-<div class="goal"><span class="n">05.</span> Co-desarrollar recomendaciones de política pública junto a autoridades sanitarias y educativas (WP5).</div>
-
-## Dónde trabajamos
-
-El proyecto reúne a instituciones de cuatro países latinoamericanos —**Perú**, **Chile**, **Colombia**— con colaboración internacional, articuladas en torno a la Universidad Peruana Cayetano Heredia (UPCH) en Lima.
-
-<div class="grid grid-3 section">
-  <div class="card"><h3>Perú</h3><p class="muted">UPCH — institución anfitriona y coordinación.</p></div>
-  <div class="card"><h3>Chile</h3><p class="muted">UChile, MICROBR y Corporación Ciudades.</p></div>
-  <div class="card"><h3>Colombia</h3><p class="muted">Universidad de los Andes.</p></div>
-</div>
-
-<p class="muted">Duración: 36 meses (2026–2029). Financiado por Wellcome. Institución anfitriona: Universidad Peruana Cayetano Heredia.</p>
