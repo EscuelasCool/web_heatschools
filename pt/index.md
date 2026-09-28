@@ -6,10 +6,6 @@ title: Início
 permalink: /pt/
 hero_title: "Tornar visível uma *ameaça silenciosa*"
 hero_lead: "Catalisando a ação política para proteger a saúde e o bem-estar dos estudantes frente ao calor extremo na América Latina."
-badges:
-  - "Chile, Colômbia e Peru"
-  - "Wellcome Climate Impacts Award"
-  - "2025–2028"
 about_title: "Por que esta pesquisa importa"
 about_body: |-
   O calor extremo é uma das consequências mais perigosas e menos visíveis das mudanças climáticas. Para crianças em idade escolar que passam horas em salas de aula mal ventiladas, ele representa uma ameaça direta à saúde, ao desempenho cognitivo e ao bem-estar.
