@@ -14,4 +14,4 @@ We are very much looking forward to learning from what is happening in other reg
 **More information**
 
 - Official Forum website: [Global Heat Forum 2026](https://heathealth.info/globalheatforum/)
-- We will be sharing updates during the Forum on [Yasna Palmeiro's LinkedIn](https://www.linkedin.com/in/PEGA-AQUI-EL-PERFIL/).
+- We will be sharing updates during the Forum on [Yasna Palmeiro's LinkedIn](https://www.linkedin.com/in/yasna-palmeiro-silva-a3a25057/).
