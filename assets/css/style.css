@@ -337,13 +337,21 @@ main:focus { outline: none; }
 .empty-state p { margin: 0 auto; max-width: 52ch; }
 .empty-state .empty-title { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; color: var(--navy); margin-bottom: .4rem; }
 
+/* Bloques de Publicaciones */
+.pubs-block + .pubs-block { margin-top: 3rem; }
+.pubs-block h2 { font-size: 1.6rem; margin-bottom: .75rem; }
+.byline { margin: 0 0 .4rem !important; color: var(--orange-ink) !important; font-weight: 600; font-size: .95rem; }
+
 /* Noticia individual */
 .post { max-width: 760px; padding-top: 2.5rem; padding-bottom: 4.5rem; }
 .text-link--back { display: inline-block; margin-bottom: 1.75rem; }
 .post .news-date { margin-bottom: .5rem; }
 .post h1 { font-size: clamp(2rem, 4vw, 2.7rem); font-weight: 900; margin-bottom: 1.5rem; }
 .post-hero { width: 100%; border-radius: var(--radius); margin: 0 0 1.75rem; }
-.post .prose p { font-size: 1.12rem; line-height: 1.8; }
+.post .prose p, .post .prose li { font-size: 1.12rem; line-height: 1.8; }
+.post .prose h2 { font-size: 1.45rem; margin: 2.2rem 0 .7rem; }
+.post .prose hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+.post .prose .source { font-size: .98rem; color: var(--slate); }
 
 /* ------------------------------------------------------------
    Pie de página

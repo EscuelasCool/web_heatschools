@@ -257,3 +257,36 @@ collections:
       - { label: "Autor", name: author, widget: string, required: false }
       - { label: "Imagem de capa", name: image, widget: image, required: false }
       - { label: "Conteúdo", name: body, widget: markdown }
+
+  - name: notes_es
+    label: "Notas (Publicaciones) · Español"
+    folder: "_notes_es"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Autoría", name: author, widget: string, required: false }
+      - { label: "Texto", name: body, widget: markdown }
+
+  - name: notes_en
+    label: "Notes (Publications) · English"
+    folder: "_notes_en"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Author", name: author, widget: string, required: false }
+      - { label: "Text", name: body, widget: markdown }
+
+  - name: notes_pt
+    label: "Notas (Publicações) · Português"
+    folder: "_notes_pt"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Autoria", name: author, widget: string, required: false }
+      - { label: "Texto", name: body, widget: markdown }

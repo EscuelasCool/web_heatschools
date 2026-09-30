@@ -18,7 +18,7 @@ url: "https://escuelascool.org"
 baseurl: ""
 
 # --- Colecciones ---
-# Noticias: una colección por idioma (cada una con su URL).
+# Noticias y notas (blog de Publicaciones): una colección por idioma.
 # Equipo y publicaciones: una sola colección; el equipo se filtra por idioma.
 collections:
   news_es:
@@ -30,6 +30,15 @@ collections:
   news_pt:
     output: true
     permalink: /pt/noticias/:name/
+  notes_es:
+    output: true
+    permalink: /publicaciones/:name/
+  notes_en:
+    output: true
+    permalink: /en/publications/:name/
+  notes_pt:
+    output: true
+    permalink: /pt/publicacoes/:name/
   team:
     output: false
   publications:
@@ -43,6 +52,12 @@ defaults:
     values: { layout: "post", lang: "en", ref: "news" }
   - scope: { path: "", type: "news_pt" }
     values: { layout: "post", lang: "pt", ref: "news" }
+  - scope: { path: "", type: "notes_es" }
+    values: { layout: "post", lang: "es", ref: "pubs" }
+  - scope: { path: "", type: "notes_en" }
+    values: { layout: "post", lang: "en", ref: "pubs" }
+  - scope: { path: "", type: "notes_pt" }
+    values: { layout: "post", lang: "pt", ref: "pubs" }
 
 # --- Build ---
 markdown: kramdown
