@@ -14,4 +14,4 @@ Vamos con muchas ganas de aprender de lo que está pasando en otras regiones del
 **Más información**
 
 - Sitio oficial del foro: [Global Heat Forum 2026](https://heathealth.info/globalheatforum/)
-- Iremos compartiendo novedades durante el foro en el [LinkedIn de Yasna Palmeiro](https://www.linkedin.com/in/PEGA-AQUI-EL-PERFIL/).
+- Iremos compartiendo novedades durante el foro en el [LinkedIn de Yasna Palmeiro](https://www.linkedin.com/in/yasna-palmeiro-silva-a3a25057/).
