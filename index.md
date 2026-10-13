@@ -16,7 +16,7 @@ about_body: |-
 stats:
   - num: "3"
     label: "Países: Chile, Colombia y Perú"
-  - num: "5"
+  - num: "6"
     label: "Instituciones socias en la región"
   - num: "∞"
     label: "Estudiantes que buscamos proteger"

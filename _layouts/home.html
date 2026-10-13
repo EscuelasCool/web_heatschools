@@ -68,12 +68,20 @@ layout: base
   <div class="container">
     <p class="eyebrow">{{ t.label_partners }}</p>
     <h2 id="partners-title">{{ t.partners_title }}</h2>
+    {% assign logos = site.static_files | where_exp: "f", "f.path contains '/assets/img/socios/'" %}
     <ul class="partners">
       {% for inst in p.partners %}
       {% assign ck = "country_" | append: inst.country %}
-      <li>
-        {% if inst.link and inst.link != "" %}<a href="{{ inst.link }}" rel="noopener">{{ inst.name }}</a>{% else %}<span class="partner-name">{{ inst.name }}</span>{% endif %}
-        <span class="partner-country">{{ t[ck] | default: inst.country }}</span>
+      {% assign logo = "" %}
+      {% for f in logos %}{% if f.basename == inst.id %}{% assign logo = f.path %}{% endif %}{% endfor %}
+      <li class="partner">
+        <div class="partner-logo">
+          {% if logo != "" %}<img src="{{ logo | relative_url }}" alt="{{ inst.name }}" loading="lazy">{% else %}<span class="partner-short" aria-hidden="true">{{ inst.short | default: inst.name }}</span>{% endif %}
+        </div>
+        <h3 class="partner-name">{{ inst.name }}</h3>
+        <p class="partner-country">{{ t[ck] | default: inst.country }}</p>
+        {% if inst.description %}<p class="partner-desc">{{ inst.description[lang] }}</p>{% endif %}
+        {% if inst.link and inst.link != "" %}<a class="text-link partner-link" href="{{ inst.link }}" rel="noopener">{{ t.visit_site }}<span class="sr-only">: {{ inst.name }}</span></a>{% endif %}
       </li>
       {% endfor %}
     </ul>

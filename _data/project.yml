@@ -12,20 +12,67 @@ host: "Universidad Peruana Cayetano Heredia"
 # Cambia a true cuando estén listas las fichas de todo el equipo.
 show_team: true
 
-# Instituciones socias. "country" usa un código: PE, CL, CO, BR, INT (regional).
+# Instituciones socias (aparecen en la portada, sección "Con quiénes trabajamos").
+#  id: también es el nombre del logo -> assets/img/socios/<id>.png (o .svg / .jpg / .webp)
+#      Si falta el logo, se muestra el nombre corto ("short").
+#  country: CL, PE, CO, AR, BR, INT (regional)
 partners:
-  - name: "Universidad Peruana Cayetano Heredia"
+  - id: "upch"
+    name: "Universidad Peruana Cayetano Heredia"
+    short: "UPCH"
     country: "PE"
     link: "https://www.cayetano.edu.pe"
-  - name: "Pontificia Universidad Católica de Chile"
-    country: "CL"
-    link: "https://www.uc.cl"
-  - name: "Universidad de los Andes"
+    description:
+      es: "Universidad privada sin fines de lucro fundada en Lima en 1961, referente en ciencias de la salud e investigación biomédica en el Perú. Es la institución anfitriona de EscuelasCool."
+      en: "A private non-profit university founded in Lima in 1961 and a leading institution for health sciences and biomedical research in Peru. It is the host institution of EscuelasCool."
+      pt: "Universidade privada sem fins lucrativos fundada em Lima em 1961, referência em ciências da saúde e pesquisa biomédica no Peru. É a instituição anfitriã do EscuelasCool."
+
+  - id: "uniandes"
+    name: "Universidad de los Andes"
+    short: "Uniandes"
     country: "CO"
     link: "https://uniandes.edu.co"
-  - name: "Corporación Ciudades"
+    description:
+      es: "Universidad privada fundada en Bogotá en 1948 y una de las principales instituciones de docencia e investigación de Colombia. Lidera el trabajo de EscuelasCool en Colombia."
+      en: "A private university founded in Bogotá in 1948 and one of Colombia's leading teaching and research institutions. It leads EscuelasCool's work in Colombia."
+      pt: "Universidade privada fundada em Bogotá em 1948 e uma das principais instituições de ensino e pesquisa da Colômbia. Lidera o trabalho do EscuelasCool na Colômbia."
+
+  - id: "corporacion-ciudades"
+    name: "Corporación Ciudades"
+    short: "Ciudades"
     country: "CL"
-    link: ""
-  - name: "MICROB-R"
-    country: "INT"
-    link: ""
+    link: "https://corporacionciudades.cl"
+    description:
+      es: "Organización chilena sin fines de lucro que trabaja por la equidad y el bienestar territorial, la reducción de la segregación urbana y una planificación integrada de las ciudades con mirada de largo plazo, combinando evidencia, diálogo y alianzas público-privadas."
+      en: "A Chilean non-profit organisation working for territorial equity and wellbeing, less urban segregation and integrated, long-term city planning, combining evidence, dialogue and public–private partnerships."
+      pt: "Organização chilena sem fins lucrativos que trabalha pela equidade e pelo bem-estar territorial, pela redução da segregação urbana e por um planejamento integrado das cidades com visão de longo prazo, combinando evidências, diálogo e parcerias público-privadas."
+
+  - id: "microb-r"
+    name: "MICROB-R"
+    short: "MICROB-R"
+    country: "CL"
+    link: "https://www.microb-r.org"
+    description:
+      es: "Núcleo Milenio para la Investigación Colaborativa en Resistencia Antimicrobiana, creado en 2018 con apoyo de la Iniciativa Científica Milenio. Reúne a investigadores de distintas instituciones y disciplinas con un enfoque de Una Salud y busca aportar evidencia para las políticas públicas."
+      en: "The Millennium Nucleus for Collaborative Research on Antimicrobial Resistance, created in 2018 with support from Chile's Millennium Science Initiative. It brings together researchers from different institutions and disciplines under a One Health approach and aims to inform public policy."
+      pt: "Núcleo Milênio de Pesquisa Colaborativa em Resistência Antimicrobiana, criado em 2018 com apoio da Iniciativa Científica Milênio do Chile. Reúne pesquisadores de diferentes instituições e disciplinas com uma abordagem de Saúde Única e busca subsidiar políticas públicas."
+
+  - id: "uchile"
+    name: "Universidad de Chile"
+    short: "U. de Chile"
+    country: "CL"
+    link: "https://www.uchile.cl"
+    description:
+      es: "Universidad pública fundada en 1842, la más antigua de Chile y una de las principales instituciones de investigación del país. En EscuelasCool participan académicas de su Escuela de Salud Pública y de su Departamento de Psicología."
+      en: "A public university founded in 1842, the oldest in Chile and one of the country's leading research institutions. Academics from its School of Public Health and its Department of Psychology take part in EscuelasCool."
+      pt: "Universidade pública fundada em 1842, a mais antiga do Chile e uma das principais instituições de pesquisa do país. Participam do EscuelasCool acadêmicas de sua Escola de Saúde Pública e de seu Departamento de Psicologia."
+
+  - id: "minsa"
+    name: "Ministerio de Salud del Perú (MINSA)"
+    short: "MINSA"
+    country: "PE"
+    link: "https://www.gob.pe/minsa"
+    description:
+      es: "Órgano rector del sector salud en el Perú, responsable de formular y conducir las políticas nacionales de salud. Su participación acerca la evidencia del proyecto a la toma de decisiones."
+      en: "The governing body of Peru's health sector, responsible for setting and leading national health policy. Its participation brings the project's evidence closer to decision-making."
+      pt: "Órgão reitor do setor de saúde no Peru, responsável por formular e conduzir as políticas nacionais de saúde. Sua participação aproxima as evidências do projeto da tomada de decisões."

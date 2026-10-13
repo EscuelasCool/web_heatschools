@@ -16,7 +16,7 @@ about_body: |-
 stats:
   - num: "3"
     label: "Países: Chile, Colômbia e Peru"
-  - num: "5"
+  - num: "6"
     label: "Instituições parceiras na região"
   - num: "∞"
     label: "Estudantes que buscamos proteger"

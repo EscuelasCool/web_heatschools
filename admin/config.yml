@@ -139,9 +139,19 @@ collections:
             widget: list
             summary: "{{fields.name}} ({{fields.country}})"
             fields:
+              - { label: "ID (sin espacios ni tildes; también es el nombre del logo)", name: id, widget: string, hint: "Ej.: upch → logo en assets/img/socios/upch.png" }
               - { label: "Nombre", name: name, widget: string }
-              - { label: "País", name: country, widget: select, options: ["PE", "CL", "CO", "BR", "INT"], hint: "INT = regional / internacional" }
+              - { label: "Nombre corto (se muestra si no hay logo)", name: short, widget: string, required: false }
+              - { label: "País", name: country, widget: select, options: ["PE", "CL", "CO", "AR", "BR", "INT"], hint: "INT = regional / internacional" }
               - { label: "Sitio web", name: link, widget: string, required: false }
+              - label: "Descripción breve"
+                name: description
+                widget: object
+                required: false
+                fields:
+                  - { label: "Español", name: es, widget: text, required: false }
+                  - { label: "English", name: en, widget: text, required: false }
+                  - { label: "Português", name: pt, widget: text, required: false }
 
   # ---------- Equipo (un solo archivo, tres idiomas) ----------
   - name: equipo
