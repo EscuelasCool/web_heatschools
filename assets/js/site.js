@@ -22,3 +22,19 @@
     }
   });
 })();
+
+// Perfiles del equipo: abre cada ficha en una ventana (dialog).
+(function () {
+  if (typeof HTMLDialogElement === 'undefined') return;
+  document.querySelectorAll('[data-dialog]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var dlg = document.getElementById(btn.getAttribute('data-dialog'));
+      if (dlg) dlg.showModal();
+    });
+  });
+  document.querySelectorAll('dialog.profile').forEach(function (dlg) {
+    dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
+    // Cerrar al hacer clic fuera de la ficha
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  });
+})();

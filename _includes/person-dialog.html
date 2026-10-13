@@ -1,0 +1,45 @@
+{%- assign p = include.p -%}
+{%- assign lang = include.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if p.bio or p.interests or p.email or p.orcid or p.linkedin or p.website -%}
+{%- assign ck = "country_" | append: p.country -%}
+<dialog class="profile" id="perfil-{{ p.id }}" aria-labelledby="perfil-{{ p.id }}-name">
+  <div class="profile-inner">
+    <button class="profile-close" type="button" data-close aria-label="{{ t.close }}"><span aria-hidden="true">×</span></button>
+    <header class="profile-head">
+      {% include person-avatar.html p=p photos=include.photos size="profile" %}
+      <div>
+        <h2 id="perfil-{{ p.id }}-name">{{ p.name }}{% if p.pronouns %} <span class="pronouns">({{ p.pronouns[lang] }})</span>{% endif %}</h2>
+        {% if p.role %}<p class="profile-role">{{ p.role[lang] }}</p>{% endif %}
+        {% if p.affiliation %}<p class="profile-aff">{{ p.affiliation[lang] }}</p>{% endif %}
+        {% if p.country != "" and t[ck] %}<p class="profile-country">{{ t[ck] }}</p>{% endif %}
+      </div>
+    </header>
+
+    {% if p.bio %}<div class="profile-bio"><p>{{ p.bio[lang] }}</p></div>{% endif %}
+
+    {% if p.interests %}
+    <h3>{{ t.interests }}</h3>
+    <ul class="chips">{% for i in p.interests[lang] %}<li>{{ i }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    {% if p.wps %}
+    <h3>{{ t.wps }}</h3>
+    <ul class="wp-list">
+      {% for w in p.wps %}{% if w == "all" %}<li>{{ t.wp_all }}</li>{% else %}{% assign wk = "wp_" | append: w | replace: ".", "_" %}<li><strong>{{ w }}</strong> {{ t[wk] }}</li>{% endif %}{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if p.email or p.orcid or p.linkedin or p.website or p.instagram or p.institution_url %}
+    <ul class="profile-links">
+      {% if p.email %}<li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>{% endif %}
+      {% if p.orcid %}<li><a href="https://orcid.org/{{ p.orcid }}" rel="noopener">ORCID</a></li>{% endif %}
+      {% if p.linkedin %}<li><a href="{{ p.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
+      {% if p.website %}<li><a href="{{ p.website }}" rel="noopener">{{ t.link_web }}</a></li>{% endif %}
+      {% if p.instagram %}<li><a href="{{ p.instagram }}" rel="noopener">Instagram</a></li>{% endif %}
+      {% if p.institution_url %}<li><a href="{{ p.institution_url }}" rel="noopener">{{ t.link_inst }}</a></li>{% endif %}
+    </ul>
+    {% endif %}
+  </div>
+</dialog>
+{%- endif -%}

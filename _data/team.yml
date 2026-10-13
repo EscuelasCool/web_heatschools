@@ -1,0 +1,553 @@
+# ============================================================
+#  Equipo EscuelasCool — un solo archivo para los tres idiomas.
+#  Editable desde el CMS: "Equipo".
+#
+#  tier: "lead"  -> aparece en "Liderazgo del proyecto" (ordenado por "order")
+#  sin tier      -> aparece en "Equipo" (ordenado alfabéticamente por "sort",
+#                   el apellido en minúsculas y sin tildes)
+#  Fotos: sube la imagen a assets/img/equipo/ con el nombre <id>.jpg
+#         (o .png / .webp). Si no hay foto, se muestran las iniciales.
+#  country: CL, PE, CO, AR, IT ... (los nombres están en _data/i18n.yml)
+#  wps: WP1, WP2, WP2.1, WP2.2, WP3, WP4, WP5 o "all" (todos)
+#  Un perfil sin bio, intereses ni enlaces aparece como "Perfil en preparación".
+# ============================================================
+
+people:
+
+- id: "palmeiro"
+  name: "Yasna Palmeiro Silva"
+  sort: "palmeiro"
+  tier: "lead"
+  order: 1
+  country: "CL"
+  org: "IDECS · UPCH · UC"
+  pronouns:
+    es: "Ella"
+    en: "She/her"
+    pt: "Ela"
+  role:
+    es: "Investigadora principal · Líder de país, Chile"
+    en: "Principal Investigator · Country lead, Chile"
+    pt: "Pesquisadora principal · Líder de país, Chile"
+  affiliation:
+    es: "Instituto de Datos y Evidencia para el Clima y la Salud (IDECS); Universidad Peruana Cayetano Heredia; Pontificia Universidad Católica de Chile"
+    en: "Institute of Data and Evidence for Climate and Health (IDECS); Universidad Peruana Cayetano Heredia; Pontificia Universidad Católica de Chile"
+    pt: "Instituto de Dados e Evidências para o Clima e a Saúde (IDECS); Universidad Peruana Cayetano Heredia; Pontificia Universidad Católica de Chile"
+  wps:
+  - "all"
+  bio:
+    es: "Yasna es enfermera titulada de la Pontificia Universidad Católica de Chile, con un diplomado en Bioestadística y Políticas Públicas, un magíster en Salud Pública de la Universidad de Chile y un doctorado en Salud Global del University College London. Cuenta con experiencia posdoctoral en el University College London y la Universidad de Washington. Actualmente es investigadora principal y fundadora de IDECS (Instituto de Datos y Evidencia para el Clima y la Salud) en Chile. Participa en diversos proyectos nacionales e internacionales sobre cambio climático y salud de la población —especialmente sobre calor extremo y salud—, entre ellos el Lancet Countdown y otros grupos de investigación en las Américas. Es además investigadora adjunta en la Universidad Peruana Cayetano Heredia (Perú) y en la Escuela de Salud Pública y el Centro de Políticas Públicas de la Pontificia Universidad Católica de Chile."
+    en: "Yasna is a registered nurse from the Pontificia Universidad Católica de Chile, with a postgraduate diploma in Biostatistics and Public Policy, a Master's in Public Health from the Universidad de Chile and a PhD in Global Health from University College London. She has postdoctoral experience at University College London and the University of Washington. She is currently Principal Investigator and founder of IDECS (Institute of Data and Evidence for Climate and Health) in Chile. She takes part in several national and international projects on climate change and population health —particularly extreme heat and health—, including the Lancet Countdown and other research groups across the Americas. She is also an adjunct researcher at Universidad Peruana Cayetano Heredia (Peru) and at the School of Public Health and the Public Policy Centre of the Pontificia Universidad Católica de Chile."
+    pt: "Yasna é enfermeira formada pela Pontificia Universidad Católica de Chile, com especialização em Bioestatística e Políticas Públicas, mestrado em Saúde Pública pela Universidad de Chile e doutorado em Saúde Global pela University College London. Tem experiência de pós-doutorado na University College London e na Universidade de Washington. Atualmente é pesquisadora principal e fundadora do IDECS (Instituto de Dados e Evidências para o Clima e a Saúde) no Chile. Participa de diversos projetos nacionais e internacionais sobre mudanças climáticas e saúde da população —especialmente sobre calor extremo e saúde—, entre eles o Lancet Countdown e outros grupos de pesquisa nas Américas. É também pesquisadora adjunta da Universidad Peruana Cayetano Heredia (Peru) e da Escola de Saúde Pública e do Centro de Políticas Públicas da Pontificia Universidad Católica de Chile."
+  interests:
+    es:
+    - "Salud pública y cambio climático"
+    - "Adaptación en salud"
+    en:
+    - "Public health and climate change"
+    - "Health adaptation"
+    pt:
+    - "Saúde pública e mudanças climáticas"
+    - "Adaptação em saúde"
+  email: "ypalmeiro@uc.cl"
+  orcid: "0000-0001-6664-1079"
+  linkedin: "https://www.linkedin.com/in/yasna-palmeiro-silva-a3a25057/"
+  website: "https://www.ypalmeiro.org"
+
+- id: "hartinger"
+  name: "Stella Hartinger"
+  sort: "hartinger"
+  tier: "lead"
+  order: 2
+  country: "PE"
+  org: "UPCH"
+  role:
+    es: "Líder de país, Perú"
+    en: "Country lead, Peru"
+    pt: "Líder de país, Peru"
+  affiliation:
+    es: "Universidad Peruana Cayetano Heredia"
+    en: "Universidad Peruana Cayetano Heredia"
+    pt: "Universidad Peruana Cayetano Heredia"
+
+- id: "pinilla"
+  name: "Monica Pinilla-Roncancio"
+  sort: "pinilla"
+  tier: "lead"
+  order: 3
+  country: "CO"
+  org: "Universidad de los Andes"
+  role:
+    es: "Líder de país, Colombia"
+    en: "Country lead, Colombia"
+    pt: "Líder de país, Colômbia"
+  affiliation:
+    es: "Profesora asociada, Facultad de Medicina, Universidad de los Andes"
+    en: "Associate Professor, Faculty of Medicine, Universidad de los Andes"
+    pt: "Professora associada, Faculdade de Medicina, Universidad de los Andes"
+  wps:
+  - "all"
+  interests:
+    es:
+    - "Sostenibilidad"
+    - "Clima"
+    - "Adaptación"
+    - "Pobreza"
+    - "Discapacidad"
+    en:
+    - "Sustainability"
+    - "Climate"
+    - "Adaptation"
+    - "Poverty"
+    - "Disability"
+    pt:
+    - "Sustentabilidade"
+    - "Clima"
+    - "Adaptação"
+    - "Pobreza"
+    - "Deficiência"
+  email: "mv.pinilla@uniandes.edu.co"
+  orcid: "0000-0002-1443-4649"
+
+- id: "llerena"
+  name: "Camila Llerena Cayo"
+  sort: "llerena"
+  country: "PE"
+  org: "UPCH"
+  pronouns:
+    es: "Ella"
+    en: "She/her"
+    pt: "Ela"
+  role:
+    es: "Investigadora"
+    en: "Researcher"
+    pt: "Pesquisadora"
+  affiliation:
+    es: "Centro Latinoamericano de Excelencia en Cambio Climático y Salud, Universidad Peruana Cayetano Heredia"
+    en: "Latin American Centre of Excellence for Climate Change and Health, Universidad Peruana Cayetano Heredia"
+    pt: "Centro Latino-Americano de Excelência em Mudanças Climáticas e Saúde, Universidad Peruana Cayetano Heredia"
+  wps:
+  - "WP2"
+  - "WP3"
+  - "WP5"
+  bio:
+    es: "Camila Llerena es investigadora, licenciada en Biología por la Universidad Peruana Cayetano Heredia y magíster en Climate Studies por Wageningen University & Research (Países Bajos). Actualmente desarrolla investigación en la intersección entre clima, ecosistemas y salud humana, con especial interés en los impactos del calor extremo, la vulnerabilidad climática y la adaptación al cambio climático en América Latina."
+    en: "Camila Llerena is a researcher with a BSc in Biology from Universidad Peruana Cayetano Heredia and an MSc in Climate Studies from Wageningen University & Research (the Netherlands). Her research sits at the intersection of climate, ecosystems and human health, with a particular interest in the impacts of extreme heat, climate vulnerability and climate change adaptation in Latin America."
+    pt: "Camila Llerena é pesquisadora, bacharel em Biologia pela Universidad Peruana Cayetano Heredia e mestre em Climate Studies pela Wageningen University & Research (Países Baixos). Atualmente desenvolve pesquisa na interseção entre clima, ecossistemas e saúde humana, com especial interesse nos impactos do calor extremo, na vulnerabilidade climática e na adaptação às mudanças climáticas na América Latina."
+  interests:
+    es:
+    - "Adaptación al cambio climático"
+    - "Riesgos climáticos"
+    - "Métodos geoespaciales"
+    en:
+    - "Climate change adaptation"
+    - "Climate risks"
+    - "Geospatial methods"
+    pt:
+    - "Adaptação às mudanças climáticas"
+    - "Riscos climáticos"
+    - "Métodos geoespaciais"
+  email: "camila.llerena.c@upch.pe"
+  orcid: "0000-0002-8130-4449"
+  linkedin: "https://www.linkedin.com/in/camila-llerena-cayo"
+  institution_url: "https://climaupch.com/"
+
+- id: "nino-machado"
+  name: "Natalia Niño-Machado"
+  sort: "nino-machado"
+  country: "CO"
+  org: "Universidad de los Andes"
+  pronouns:
+    es: "Ella"
+    en: "She/her"
+    pt: "Ela"
+  role:
+    es: "Investigadora"
+    en: "Researcher"
+    pt: "Pesquisadora"
+  affiliation:
+    es: "Investigadora asociada, Centro de Objetivos de Desarrollo Sostenible para América Latina y el Caribe, Universidad de los Andes"
+    en: "Associate Researcher, Sustainable Development Goals Center for Latin America and the Caribbean, Universidad de los Andes"
+    pt: "Pesquisadora associada, Centro de Objetivos de Desenvolvimento Sustentável para a América Latina e o Caribe, Universidad de los Andes"
+  wps:
+  - "WP3"
+  bio:
+    es: "Natalia Niño-Machado es doctora en Estudios Sociales de la Ciencia y la Tecnología de la Universidad de Edimburgo e investigadora asociada de la Universidad de los Andes. Su trabajo se sitúa en la intersección entre antropología, salud pública, ciencias biológicas y cambio climático, con énfasis en América Latina y el Caribe. Su investigación emplea enfoques etnográficos y métodos cualitativos para comprender cómo se producen, interpretan y utilizan conocimientos sobre el clima y la salud, y cómo estos conocimientos se incorporan en la toma de decisiones. Ha codirigido proyectos de co-diseño entre comunidades científicas, entidades públicas y organizaciones de la sociedad civil para fortalecer la respuesta frente a riesgos climáticos y sus efectos en la salud."
+    en: "Natalia Niño-Machado holds a PhD in Science and Technology Studies from the University of Edinburgh and is an associate researcher at Universidad de los Andes. Her work lies at the intersection of anthropology, public health, the biological sciences and climate change, with a focus on Latin America and the Caribbean. She uses ethnographic approaches and qualitative methods to understand how knowledge about climate and health is produced, interpreted and used, and how it is incorporated into decision-making. She has co-led co-design projects bringing together scientific communities, public bodies and civil society organisations to strengthen responses to climate risks and their health effects."
+    pt: "Natalia Niño-Machado é doutora em Estudos Sociais da Ciência e da Tecnologia pela Universidade de Edimburgo e pesquisadora associada da Universidad de los Andes. Seu trabalho situa-se na interseção entre antropologia, saúde pública, ciências biológicas e mudanças climáticas, com ênfase na América Latina e no Caribe. Sua pesquisa utiliza abordagens etnográficas e métodos qualitativos para compreender como os conhecimentos sobre clima e saúde são produzidos, interpretados e utilizados, e como são incorporados à tomada de decisões. Codirigiu projetos de codesenho entre comunidades científicas, órgãos públicos e organizações da sociedade civil para fortalecer a resposta aos riscos climáticos e a seus efeitos na saúde."
+  interests:
+    es:
+    - "Clima y salud"
+    - "Investigación cualitativa"
+    - "Estudios sociales de la ciencia"
+    - "Adaptación climática"
+    - "Procesos de co-diseño"
+    en:
+    - "Climate and health"
+    - "Qualitative research"
+    - "Science and technology studies"
+    - "Climate adaptation"
+    - "Co-design processes"
+    pt:
+    - "Clima e saúde"
+    - "Pesquisa qualitativa"
+    - "Estudos sociais da ciência"
+    - "Adaptação climática"
+    - "Processos de codesenho"
+  email: "n.nino58@uniandes.edu.co"
+  orcid: "0000-0001-7887-9439"
+  institution_url: "https://cods.uniandes.edu.co/card-natalia-nino/"
+
+- id: "conejeros"
+  name: "José Daniel Conejeros Pavez"
+  sort: "conejeros"
+  country: "IT"
+  org: "ISI Foundation"
+  role:
+    es: "Investigador"
+    en: "Researcher"
+    pt: "Pesquisador"
+  affiliation:
+    es: "Research Fellow, ISI Foundation (Turín, Italia)"
+    en: "Research Fellow, ISI Foundation (Turin, Italy)"
+    pt: "Research Fellow, ISI Foundation (Turim, Itália)"
+  wps:
+  - "WP2.1"
+  bio:
+    es: "José Daniel Conejeros es Lagrange Fellow en la ISI Foundation, en Turín, Italia. También está afiliado a la Pontificia Universidad Católica de Chile, donde colabora con la Escuela de Gobierno y con el Centro Nacional de Excelencia SENTINET. Su formación en estadística y ciencias sociales combina modelamiento epidemiológico espaciotemporal, filogeografía y ciencia de datos para estudiar enfermedades infecciosas en América Latina, como la tuberculosis y la influenza. Además, analiza cómo el clima y el ambiente influyen en la salud de distintas poblaciones y etapas vitales. Promueve la ciencia abierta, participa en redes regionales y desarrolla herramientas de código abierto para la investigación reproducible."
+    en: "José Daniel Conejeros is a Lagrange Fellow at the ISI Foundation in Turin, Italy. He is also affiliated with the Pontificia Universidad Católica de Chile, where he collaborates with the School of Government and the SENTINET National Centre of Excellence. His background in statistics and social sciences combines spatiotemporal epidemiological modelling, phylogeography and data science to study infectious diseases in Latin America, such as tuberculosis and influenza. He also examines how climate and the environment shape health across different populations and life stages. He promotes open science, takes part in regional networks and develops open-source tools for reproducible research."
+    pt: "José Daniel Conejeros é Lagrange Fellow na ISI Foundation, em Turim, Itália. Também é afiliado à Pontificia Universidad Católica de Chile, onde colabora com a Escola de Governo e com o Centro Nacional de Excelência SENTINET. Sua formação em estatística e ciências sociais combina modelagem epidemiológica espaço-temporal, filogeografia e ciência de dados para estudar doenças infecciosas na América Latina, como a tuberculose e a influenza. Além disso, analisa como o clima e o ambiente influenciam a saúde de diferentes populações e fases da vida. Promove a ciência aberta, participa de redes regionais e desenvolve ferramentas de código aberto para pesquisa reprodutível."
+  interests:
+    es:
+    - "Modelamiento epidemiológico espaciotemporal"
+    - "Cambio climático y salud en poblaciones vulnerables"
+    - "Dinámica de enfermedades infecciosas en América Latina"
+    - "Ciencia abierta y herramientas reproducibles"
+    en:
+    - "Spatiotemporal epidemiological modelling"
+    - "Climate change and health in vulnerable populations"
+    - "Infectious disease dynamics in Latin America"
+    - "Open science and reproducible tools"
+    pt:
+    - "Modelagem epidemiológica espaço-temporal"
+    - "Mudanças climáticas e saúde em populações vulneráveis"
+    - "Dinâmica de doenças infecciosas na América Latina"
+    - "Ciência aberta e ferramentas reprodutíveis"
+  email: "jdconejeros@uc.cl"
+  orcid: "0000-0003-3402-4361"
+  website: "https://jd-conejeros.com/"
+  institution_url: "https://www.isi.it/"
+
+- id: "palharini"
+  name: "Rayana Palharini"
+  sort: "palharini"
+  country: "CL"
+  org: "Lancet Countdown Latinoamérica"
+  role:
+    es: "Co-investigadora"
+    en: "Co-investigator"
+    pt: "Co-pesquisadora"
+  affiliation:
+    es: "Investigadora, Lancet Countdown Latinoamérica"
+    en: "Research Fellow, Lancet Countdown Latin America"
+    pt: "Pesquisadora, Lancet Countdown América Latina"
+  wps:
+  - "WP2.1"
+  bio:
+    es: "Rayana Palharini es meteoróloga e investigadora, y su trayectoria se caracteriza por enfoques interdisciplinarios sobre clima, ambiente y salud pública. Es titulada en Meteorología por la Universidad Federal de Campina Grande y en Administración de Empresas. Realizó su maestría y doctorado en Meteorología en el Instituto Nacional de Investigaciones Espaciales (INPE) de Brasil, donde estudió eventos de precipitación extrema en Sudamérica a partir de estimaciones satelitales y su relación con los sistemas convectivos de mesoescala. Luego realizó estudios posdoctorales sobre clima, salud y políticas públicas. Actualmente es investigadora del Lancet Countdown Latinoamérica y colabora con el comité asesor de cambio climático del Ministerio de Ciencia, Tecnología, Conocimiento e Innovación de Chile. Su producción científica abarca la teledetección atmosférica, las estimaciones satelitales de precipitación intensa, los impactos de los eventos climáticos extremos en la salud, la gestión del riesgo y las políticas ambientales."
+    en: "Rayana Palharini is a meteorologist and researcher whose career is characterised by interdisciplinary approaches to climate, environment and public health. She holds degrees in Meteorology from the Federal University of Campina Grande and in Business Administration. She completed her master's and doctorate in Meteorology at Brazil's National Institute for Space Research (INPE), where she studied extreme precipitation events in South America using satellite estimates and their relationship with mesoscale convective systems. She then carried out postdoctoral research on climate, health and public policy. She is currently a research fellow at the Lancet Countdown Latin America and collaborates with the climate change advisory committee of Chile's Ministry of Science and Technology. Her work covers atmospheric remote sensing, satellite estimates of intense precipitation, the health impacts of extreme climate events, risk management and environmental policy."
+    pt: "Rayana Palharini é meteorologista e pesquisadora, e sua trajetória é marcada por abordagens interdisciplinares sobre clima, ambiente e saúde pública. É graduada em Meteorologia pela Universidade Federal de Campina Grande e em Administração de Empresas. Fez mestrado e doutorado em Meteorologia no Instituto Nacional de Pesquisas Espaciais (INPE), onde estudou eventos de precipitação extrema na América do Sul a partir de estimativas por satélite e sua relação com sistemas convectivos de mesoescala. Em seguida, realizou pós-doutorado sobre clima, saúde e políticas públicas. Atualmente é pesquisadora do Lancet Countdown América Latina e colabora com o comitê consultivo de mudanças climáticas do Ministério da Ciência, Tecnologia, Conhecimento e Inovação do Chile. Sua produção científica abrange sensoriamento remoto atmosférico, estimativas de precipitação intensa por satélite, impactos de eventos climáticos extremos na saúde, gestão de riscos e políticas ambientais."
+  interests:
+    es:
+    - "Cambio climático y salud"
+    - "Extremos climáticos"
+    - "Desastres naturales"
+    - "Estimaciones satelitales"
+    en:
+    - "Climate change and health"
+    - "Climate extremes"
+    - "Natural disasters"
+    - "Satellite estimates"
+    pt:
+    - "Mudanças climáticas e saúde"
+    - "Extremos climáticos"
+    - "Desastres naturais"
+    - "Estimativas por satélite"
+  email: "rayana.palharini@gmail.com"
+  orcid: "0000-0001-5503-8450"
+
+- id: "letelier"
+  name: "M. Pía Letelier Cortés"
+  sort: "letelier"
+  country: "CL"
+  pronouns:
+    es: "Ella"
+    en: "She/her"
+    pt: "Ela"
+  role:
+    es: "Investigadora"
+    en: "Researcher"
+    pt: "Pesquisadora"
+  affiliation:
+    es: "Investigadora independiente"
+    en: "Independent researcher"
+    pt: "Pesquisadora independente"
+  wps:
+  - "WP3"
+  bio:
+    es: "Pía Letelier es psicóloga clínica con formación en Ecopsicología. Su trabajo se desarrolla en la intersección entre salud mental, ecopsicología y problemáticas socioambientales, con especial énfasis en el enfoque de género y la crisis climática, así como en la comprensión de los contextos socioculturales. Ha participado en iniciativas de investigación y divulgación vinculadas a la salud mental y la relación humano-naturaleza. Actualmente se desempeña como asistente de investigación en estudios sobre salud mental y cambio climático, explorando las experiencias emocionales y sociales asociadas a la crisis ambiental desde una perspectiva interdisciplinaria."
+    en: "Pía Letelier is a clinical psychologist trained in Ecopsychology. Her work lies at the intersection of mental health, ecopsychology and socio-environmental issues, with particular emphasis on gender and the climate crisis and on understanding sociocultural contexts. She has taken part in research and outreach initiatives on mental health and the human–nature relationship. She currently works as a research assistant on studies of mental health and climate change, exploring the emotional and social experiences associated with the environmental crisis from an interdisciplinary perspective."
+    pt: "Pía Letelier é psicóloga clínica com formação em Ecopsicologia. Seu trabalho se desenvolve na interseção entre saúde mental, ecopsicologia e problemas socioambientais, com especial ênfase na perspectiva de gênero e na crise climática, bem como na compreensão dos contextos socioculturais. Participou de iniciativas de pesquisa e divulgação ligadas à saúde mental e à relação ser humano-natureza. Atualmente atua como assistente de pesquisa em estudos sobre saúde mental e mudanças climáticas, explorando as experiências emocionais e sociais associadas à crise ambiental a partir de uma perspectiva interdisciplinar."
+  interests:
+    es:
+    - "Ecopsicología"
+    - "Ecofeminismo"
+    - "Género y desigualdades"
+    - "Cambio climático"
+    - "Salud mental"
+    en:
+    - "Ecopsychology"
+    - "Ecofeminism"
+    - "Gender and inequalities"
+    - "Climate change"
+    - "Mental health"
+    pt:
+    - "Ecopsicologia"
+    - "Ecofeminismo"
+    - "Gênero e desigualdades"
+    - "Mudanças climáticas"
+    - "Saúde mental"
+  email: "ps.pialetelier@gmail.com"
+  orcid: "0009-0005-7997-0855"
+  instagram: "https://www.instagram.com/ps.aflor.depiel/"
+
+- id: "andrade"
+  name: "Martín Andrade"
+  sort: "andrade"
+  country: "CL"
+  org: "Corporación Ciudades"
+  pronouns:
+    es: "Él"
+    en: "He/him"
+    pt: "Ele"
+  role:
+    es: "Posicionamiento e incidencia"
+    en: "Positioning and advocacy"
+    pt: "Posicionamento e incidência"
+  affiliation:
+    es: "Director ejecutivo, Corporación Ciudades"
+    en: "Executive Director, Corporación Ciudades"
+    pt: "Diretor executivo, Corporación Ciudades"
+  wps:
+  - "WP3"
+  - "WP4"
+  - "WP5"
+  bio:
+    es: "Martín Andrade es director ejecutivo de Corporación Ciudades, entidad sin fines de lucro cuya misión es disminuir la segregación urbana e impulsar la planificación integrada del territorio. Es arquitecto de la Pontificia Universidad Católica de Chile y máster en Medio Ambiente de la Universidad de Melbourne (Australia). Es cofundador de la Fundación Mi Parque y fue coordinador nacional de Parques Urbanos en el Ministerio de Vivienda y Urbanismo de Chile. Se desempeñó como arquitecto sénior en el equipo de planificación de espacios públicos de la Ciudad de Melbourne y fue director del Parque Metropolitano de Santiago."
+    en: "Martín Andrade is Executive Director of Corporación Ciudades, a non-profit organisation whose mission is to reduce urban segregation and promote integrated territorial planning. He is an architect from the Pontificia Universidad Católica de Chile and holds a Master's in Environment from the University of Melbourne (Australia). He co-founded Fundación Mi Parque and was National Coordinator of Urban Parks at Chile's Ministry of Housing and Urban Development. He worked as a senior architect in the public space planning team of the City of Melbourne and was Director of the Parque Metropolitano de Santiago."
+    pt: "Martín Andrade é diretor executivo da Corporación Ciudades, organização sem fins lucrativos cuja missão é reduzir a segregação urbana e promover o planejamento integrado do território. É arquiteto pela Pontificia Universidad Católica de Chile e mestre em Meio Ambiente pela Universidade de Melbourne (Austrália). É cofundador da Fundación Mi Parque e foi coordenador nacional de Parques Urbanos no Ministério da Habitação e Urbanismo do Chile. Atuou como arquiteto sênior na equipe de planejamento de espaços públicos da Cidade de Melbourne e foi diretor do Parque Metropolitano de Santiago."
+  interests:
+    es:
+    - "Inequidad urbana"
+    - "Inversión pública"
+    - "Infraestructura verde"
+    - "Planificación urbana"
+    en:
+    - "Urban inequity"
+    - "Public investment"
+    - "Green infrastructure"
+    - "Urban planning"
+    pt:
+    - "Desigualdade urbana"
+    - "Investimento público"
+    - "Infraestrutura verde"
+    - "Planejamento urbano"
+  email: "martin.andrade@corporacionciudades.cl"
+  institution_url: "https://corporacionciudades.cl/"
+
+- id: "hoffmann"
+  name: "Tamara Hoffmann Ferrada"
+  sort: "hoffmann"
+  country: "CL"
+  org: "Universidad de Chile · UC · MIDAP"
+  role:
+    es: "Investigadora líder WP3"
+    en: "WP3 lead researcher"
+    pt: "Pesquisadora líder do WP3"
+  affiliation:
+    es: "Candidata a doctora, Departamento de Psicología, Universidad de Chile / Pontificia Universidad Católica de Chile / Instituto Milenio para la Investigación en Depresión y Personalidad (MIDAP)"
+    en: "PhD candidate, Department of Psychology, Universidad de Chile / Pontificia Universidad Católica de Chile / Millennium Institute for Research in Depression and Personality (MIDAP)"
+    pt: "Doutoranda, Departamento de Psicologia, Universidad de Chile / Pontificia Universidad Católica de Chile / Instituto Milênio de Pesquisa em Depressão e Personalidade (MIDAP)"
+  wps:
+  - "WP3"
+  bio:
+    es: "Tamara Hoffmann Ferrada es candidata a doctora en Psicoterapia por la Universidad de Chile y la Pontificia Universidad Católica de Chile. Su línea de investigación se centra en la ecoansiedad en jóvenes chilenos, articulando enfoques clínicos, socioculturales y contextuales. Psicóloga con amplia experiencia clínica y especialización de posgrado en atención a adolescentes y jóvenes, ha sido co-investigadora en diversos proyectos sobre salud mental y bienestar juvenil. En el ámbito socioambiental, ha liderado investigaciones pioneras sobre la relación entre cambio climático y salud mental en Chile. Desde 2025 es miembro de la Climate Psychology Alliance (Reino Unido) y es investigadora afiliada externa del grupo SERSus del centro Frontiers of Arctic and Global Resilience (FRONT) de la Universidad de Oulu, Finlandia. Fue miembro fundadora del Comité Científico de Cambio Climático en la elaboración del Informe Previo de Actualización de la Contribución Determinada a Nivel Nacional (NDC 2025) y expositora en Congreso Futuro 2026 sobre ecoansiedad."
+    en: "Tamara Hoffmann Ferrada is a PhD candidate in Psychotherapy at the Universidad de Chile and the Pontificia Universidad Católica de Chile. Her research focuses on eco-anxiety among young people in Chile, bringing together clinical, sociocultural and contextual approaches. A psychologist with extensive clinical experience and postgraduate specialisation in adolescent and youth care, she has been a co-investigator on several projects on youth mental health and wellbeing. In the socio-environmental field, she has led pioneering research on the relationship between climate change and mental health in Chile. Since 2025 she has been a member of the Climate Psychology Alliance (UK), and she is an external affiliated researcher of the SERSus group at the Frontiers of Arctic and Global Resilience (FRONT) centre, University of Oulu, Finland. She was a founding member of the Scientific Committee on Climate Change for the preliminary report on Chile's updated Nationally Determined Contribution (NDC 2025) and spoke on eco-anxiety at Congreso Futuro 2026."
+    pt: "Tamara Hoffmann Ferrada é doutoranda em Psicoterapia pela Universidad de Chile e pela Pontificia Universidad Católica de Chile. Sua linha de pesquisa centra-se na ecoansiedade entre jovens chilenos, articulando abordagens clínicas, socioculturais e contextuais. Psicóloga com ampla experiência clínica e especialização de pós-graduação no atendimento a adolescentes e jovens, foi co-pesquisadora em diversos projetos sobre saúde mental e bem-estar juvenil. No campo socioambiental, liderou pesquisas pioneiras sobre a relação entre mudanças climáticas e saúde mental no Chile. Desde 2025 é membro da Climate Psychology Alliance (Reino Unido) e pesquisadora afiliada externa do grupo SERSus do centro Frontiers of Arctic and Global Resilience (FRONT) da Universidade de Oulu, Finlândia. Foi membro fundadora do Comitê Científico de Mudanças Climáticas na elaboração do relatório prévio de atualização da Contribuição Nacionalmente Determinada do Chile (NDC 2025) e palestrante no Congreso Futuro 2026 sobre ecoansiedade."
+  interests:
+    es:
+    - "Ecoansiedad"
+    - "Juventud"
+    - "Bienestar"
+    - "Salud mental en jóvenes"
+    en:
+    - "Eco-anxiety"
+    - "Youth"
+    - "Wellbeing"
+    - "Youth mental health"
+    pt:
+    - "Ecoansiedade"
+    - "Juventude"
+    - "Bem-estar"
+    - "Saúde mental de jovens"
+  email: "tamara.hoffmann@ug.uchile.cl"
+  orcid: "0000-0002-1826-0877"
+
+- id: "leighton"
+  name: "Catalina Leighton Q."
+  sort: "leighton"
+  pronouns:
+    es: "Ella"
+    en: "She/her"
+    pt: "Ela"
+  role:
+    es: "Coordinadora de proyecto"
+    en: "Project Coordinator"
+    pt: "Coordenadora de projeto"
+  wps:
+  - "all"
+  bio:
+    es: "Catalina Leighton es investigadora chilena en salud pública, radicada en Londres, y coordinadora del proyecto. Con formación en ciencias biomédicas en Chile, es magíster en Salud Global y Desarrollo por el University College London, donde su tesis analizó en qué medida la evidencia sobre calor y salud ocupacional incorpora la perspectiva de género. Fue coautora de una revisión sistemática registrada en PROSPERO sobre medidas de protección frente al calor extremo en el trabajo, complementada con entrevistas a empresas chilenas; el estudio contribuyó a un informe nacional de evidencia para la Superintendencia de Seguridad Social (SUSESO). Durante la pandemia de COVID-19, coordinó trabajo de salud comunitaria con personal de primera línea en hospitales públicos y departamentos municipales de Santiago."
+    en: "Catalina is a Chilean public health researcher based in London and the project's Coordinator. She holds an MSc in Global Health and Development from University College London, where her dissertation examined how far occupational heat-health evidence accounts for gender. She previously co-authored a PROSPERO-registered systematic review on workplace protection from extreme heat, which contributed to a national evidence report for Chile's Superintendency of Social Security. During the COVID-19 pandemic, she coordinated community health work with frontline staff across public hospitals and municipal departments in Santiago."
+    pt: "Catalina Leighton é pesquisadora chilena em saúde pública, radicada em Londres, e coordenadora do projeto. Com formação em ciências biomédicas no Chile, é mestre em Saúde Global e Desenvolvimento pela University College London, onde sua dissertação analisou em que medida as evidências sobre calor e saúde ocupacional incorporam a perspectiva de gênero. Foi coautora de uma revisão sistemática registrada no PROSPERO sobre medidas de proteção contra o calor extremo no trabalho, complementada com entrevistas a empresas chilenas; o estudo contribuiu para um relatório nacional de evidências para a Superintendência de Seguridade Social do Chile (SUSESO). Durante a pandemia de COVID-19, coordenou trabalho de saúde comunitária com profissionais da linha de frente em hospitais públicos e departamentos municipais de Santiago."
+  interests:
+    es:
+    - "Cambio climático, ambiente y salud"
+    - "Salud ambiental"
+    - "Determinantes sociales de la salud"
+    - "Sistemas y políticas de salud"
+    - "Desigualdades en salud"
+    en:
+    - "Climate change, environment and health"
+    - "Environmental health"
+    - "Social determinants of health"
+    - "Health systems and policy"
+    - "Health inequalities"
+    pt:
+    - "Mudanças climáticas, ambiente e saúde"
+    - "Saúde ambiental"
+    - "Determinantes sociais da saúde"
+    - "Sistemas e políticas de saúde"
+    - "Desigualdades em saúde"
+  email: "catalina.leighton.24@alumni.ucl.ac.uk"
+
+- id: "espinoza"
+  name: "Maria Loreto Espinoza Tillería"
+  sort: "espinoza"
+  country: "CL"
+  org: "Universidad de Chile"
+  role:
+    es: "Investigadora, equipo Chile"
+    en: "Researcher, Chile team"
+    pt: "Pesquisadora, equipe Chile"
+  affiliation:
+    es: "Docente, Escuela de Salud Pública, Facultad de Medicina, Universidad de Chile"
+    en: "Lecturer, School of Public Health, Faculty of Medicine, Universidad de Chile"
+    pt: "Docente, Escola de Saúde Pública, Faculdade de Medicina, Universidad de Chile"
+  wps:
+  - "WP1"
+  - "WP2.2"
+  bio:
+    es: "Cirujana dentista, especialista en Salud Pública y magíster en Salud Pública por la Universidad de Chile, con mención en Epidemiología y Políticas Públicas, y con estudios de posgrado en Asentamientos Humanos y Medio Ambiente en la Pontificia Universidad Católica de Chile. Cuenta con diez años de experiencia en epidemiología, vigilancia sanitaria, gestión pública e investigación, además de trayectoria en docencia universitaria. Sus principales áreas de interés incluyen la epidemiología ambiental, el cambio climático y la salud, las desigualdades socioambientales y las políticas públicas. En EscuelasCool contribuye a la investigación sobre exposición al calor, salud escolar y estrategias de adaptación climática en Chile."
+    en: "A dental surgeon and public health specialist, she holds a Master's in Public Health from the Universidad de Chile, with a concentration in Epidemiology and Public Policy, and has postgraduate training in Human Settlements and Environment from the Pontificia Universidad Católica de Chile. She has ten years of experience in epidemiology, health surveillance, public management and research, as well as university teaching. Her main interests include environmental epidemiology, climate change and health, socio-environmental inequalities and public policy. In EscuelasCool she contributes to research on heat exposure, school health and climate adaptation strategies in Chile."
+    pt: "Cirurgiã-dentista, especialista em Saúde Pública e mestre em Saúde Pública pela Universidad de Chile, com ênfase em Epidemiologia e Políticas Públicas, e com estudos de pós-graduação em Assentamentos Humanos e Meio Ambiente na Pontificia Universidad Católica de Chile. Tem dez anos de experiência em epidemiologia, vigilância sanitária, gestão pública e pesquisa, além de trajetória na docência universitária. Suas principais áreas de interesse incluem epidemiologia ambiental, mudanças climáticas e saúde, desigualdades socioambientais e políticas públicas. No EscuelasCool, contribui para a pesquisa sobre exposição ao calor, saúde escolar e estratégias de adaptação climática no Chile."
+  interests:
+    es:
+    - "Epidemiología ambiental, cambio climático y salud"
+    - "Epidemiología de enfermedades transmisibles y no transmisibles"
+    - "Salud infantil, calor extremo y entornos escolares"
+    - "Desigualdades socioambientales, salud urbana y justicia territorial"
+    - "Vigilancia epidemiológica, políticas públicas y adaptación climática"
+    en:
+    - "Environmental epidemiology, climate change and health"
+    - "Epidemiology of communicable and non-communicable diseases"
+    - "Child health, extreme heat and school environments"
+    - "Socio-environmental inequalities, urban health and territorial justice"
+    - "Epidemiological surveillance, public policy and climate adaptation"
+    pt:
+    - "Epidemiologia ambiental, mudanças climáticas e saúde"
+    - "Epidemiologia de doenças transmissíveis e não transmissíveis"
+    - "Saúde infantil, calor extremo e ambientes escolares"
+    - "Desigualdades socioambientais, saúde urbana e justiça territorial"
+    - "Vigilância epidemiológica, políticas públicas e adaptação climática"
+  orcid: "0009-0005-8192-6482"
+  linkedin: "https://www.linkedin.com/in/maria-loreto-espinoza-tiller%C3%ADa-693882133"
+
+- id: "alvarado"
+  name: "Andy Alvarado"
+  sort: "alvarado"
+  country: "PE"
+  org: "UPCH"
+  role:
+    es: "Investigador"
+    en: "Researcher"
+    pt: "Pesquisador"
+  affiliation: &id002
+    es: "Universidad Peruana Cayetano Heredia"
+    en: "Universidad Peruana Cayetano Heredia"
+    pt: "Universidad Peruana Cayetano Heredia"
+
+- id: "benites"
+  name: "Ivonne Benites"
+  sort: "benites"
+  country: "PE"
+  org: "MINSA Perú"
+  affiliation:
+    es: "Ministerio de Salud del Perú (MINSA)"
+    en: "Ministry of Health of Peru (MINSA)"
+    pt: "Ministério da Saúde do Peru (MINSA)"
+
+- id: "boix"
+  name: "Mery Boix"
+  sort: "boix"
+  country: "AR"
+  role:
+    es: "Investigadora"
+    en: "Researcher"
+    pt: "Pesquisadora"
+
+- id: "mazuela"
+  name: "Valentina Mazuela"
+  sort: "mazuela"
+  country: "CL"
+  org: "Corporación Ciudades"
+  affiliation: &id001
+    es: "Corporación Ciudades"
+    en: "Corporación Ciudades"
+    pt: "Corporación Ciudades"
+
+- id: "perez"
+  name: "Fernando Pérez"
+  sort: "perez"
+  country: "CL"
+  org: "Corporación Ciudades"
+  affiliation: *id001
+
+- id: "quilcat"
+  name: "Jorge Quilcat"
+  sort: "quilcat"
+  role:
+    es: "Gestión administrativa"
+    en: "Administration"
+    pt: "Gestão administrativa"
+
+- id: "vela"
+  name: "Zoila Vela"
+  sort: "vela"
+  country: "PE"
+  org: "UPCH"
+  role:
+    es: "Gestora de proyecto"
+    en: "Project Manager"
+    pt: "Gestora de projeto"
+  affiliation: *id002

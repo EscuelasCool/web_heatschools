@@ -143,57 +143,83 @@ collections:
               - { label: "País", name: country, widget: select, options: ["PE", "CL", "CO", "BR", "INT"], hint: "INT = regional / internacional" }
               - { label: "Sitio web", name: link, widget: string, required: false }
 
-  # ---------- Equipo (una lista por idioma; misma carpeta, filtrada) ----------
-  - name: equipo_es
-    label: "Equipo · Español"
-    label_singular: "Persona"
-    folder: "_team"
-    filter: { field: lang, value: es }
-    create: true
-    slug: "{{fields.name | slugify}}-es"
-    summary: "{{fields.name}} — {{fields.role}}"
-    fields:
-      - { label: Idioma, name: lang, widget: hidden, default: es }
-      - { label: "Nombre", name: name, widget: string }
-      - { label: "Rol", name: role, widget: string }
-      - { label: "Afiliación", name: affiliation, widget: string }
-      - { label: "Orden (menor = primero)", name: order, widget: number, default: 99, value_type: int }
-      - { label: "Foto", name: photo, widget: image, required: false }
-      - { label: "Enlace a perfil", name: link, widget: string, required: false }
-
-  - name: equipo_en
-    label: "Team · English"
-    label_singular: "Person"
-    folder: "_team"
-    filter: { field: lang, value: en }
-    create: true
-    slug: "{{fields.name | slugify}}-en"
-    summary: "{{fields.name}} — {{fields.role}}"
-    fields:
-      - { label: Language, name: lang, widget: hidden, default: en }
-      - { label: "Name", name: name, widget: string }
-      - { label: "Role", name: role, widget: string }
-      - { label: "Affiliation", name: affiliation, widget: string }
-      - { label: "Order (lower = first)", name: order, widget: number, default: 99, value_type: int }
-      - { label: "Photo", name: photo, widget: image, required: false }
-      - { label: "Profile link", name: link, widget: string, required: false }
-
-  - name: equipo_pt
-    label: "Equipe · Português"
-    label_singular: "Pessoa"
-    folder: "_team"
-    filter: { field: lang, value: pt }
-    create: true
-    slug: "{{fields.name | slugify}}-pt"
-    summary: "{{fields.name}} — {{fields.role}}"
-    fields:
-      - { label: Idioma, name: lang, widget: hidden, default: pt }
-      - { label: "Nome", name: name, widget: string }
-      - { label: "Função", name: role, widget: string }
-      - { label: "Afiliação", name: affiliation, widget: string }
-      - { label: "Ordem (menor = primeiro)", name: order, widget: number, default: 99, value_type: int }
-      - { label: "Foto", name: photo, widget: image, required: false }
-      - { label: "Link de perfil", name: link, widget: string, required: false }
+  # ---------- Equipo (un solo archivo, tres idiomas) ----------
+  - name: equipo
+    label: "Equipo"
+    files:
+      - name: team
+        label: "Personas del equipo"
+        file: "_data/team.yml"
+        fields:
+          - label: "Personas"
+            name: people
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "ID (sin espacios ni tildes; también es el nombre de la foto)", name: id, widget: string, hint: "Ej.: palmeiro → foto en assets/img/equipo/palmeiro.jpg" }
+              - { label: "Nombre", name: name, widget: string }
+              - { label: "Orden alfabético (apellido en minúsculas, sin tildes)", name: sort, widget: string }
+              - { label: "Nivel", name: tier, widget: select, options: [{ label: "Liderazgo", value: "lead" }], required: false, hint: "Déjalo vacío para el equipo general" }
+              - { label: "Orden en Liderazgo", name: order, widget: number, required: false }
+              - { label: "País", name: country, widget: select, options: ["CL", "PE", "CO", "AR", "IT", "UK", "BR"], required: false }
+              - { label: "Institución (versión corta para la tarjeta)", name: org, widget: string, required: false }
+              - label: "Pronombres"
+                name: pronouns
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Español", name: es, widget: string, required: false }
+                  - { label: "English", name: en, widget: string, required: false }
+                  - { label: "Português", name: pt, widget: string, required: false }
+              - label: "Rol en el proyecto"
+                name: role
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Español", name: es, widget: string, required: false }
+                  - { label: "English", name: en, widget: string, required: false }
+                  - { label: "Português", name: pt, widget: string, required: false }
+              - label: "Cargo y afiliación"
+                name: affiliation
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Español", name: es, widget: string, required: false }
+                  - { label: "English", name: en, widget: string, required: false }
+                  - { label: "Português", name: pt, widget: string, required: false }
+              - label: "Paquetes de trabajo"
+                name: wps
+                widget: select
+                multiple: true
+                required: false
+                options: ["all", "WP1", "WP2", "WP2.1", "WP2.2", "WP3", "WP4", "WP5"]
+              - label: "Biografía"
+                name: bio
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Español", name: es, widget: text, required: false }
+                  - { label: "English", name: en, widget: text, required: false }
+                  - { label: "Português", name: pt, widget: text, required: false }
+              - label: "Intereses de investigación"
+                name: interests
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "Español", name: es, widget: list, required: false }
+                  - { label: "English", name: en, widget: list, required: false }
+                  - { label: "Português", name: pt, widget: list, required: false }
+              - { label: "Correo", name: email, widget: string, required: false }
+              - { label: "ORCID (solo el número)", name: orcid, widget: string, required: false }
+              - { label: "LinkedIn (URL)", name: linkedin, widget: string, required: false }
+              - { label: "Sitio web personal (URL)", name: website, widget: string, required: false }
+              - { label: "Instagram (URL)", name: instagram, widget: string, required: false }
+              - { label: "Sitio institucional (URL)", name: institution_url, widget: string, required: false }
 
   # ---------- Publicaciones (una sola lista, común a los 3 idiomas) ----------
   - name: publicaciones

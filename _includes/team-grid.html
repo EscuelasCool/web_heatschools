@@ -1,24 +1,32 @@
-{% assign t = site.data.i18n[include.lang] %}
+{%- comment -%}
+  Página de Equipo. Los datos están en _data/team.yml.
+  Fotos: assets/img/equipo/<id>.jpg|png|webp (si no hay, se muestran iniciales).
+{%- endcomment -%}
+{% assign lang = include.lang %}
+{% assign t = site.data.i18n[lang] %}
 {% if site.data.project.show_team %}
-{% assign people = site.team | where: "lang", include.lang | sort: "order" %}
-<ul class="team-grid">
-  {% for person in people %}
-  <li class="person">
-    {% if person.photo and person.photo != "" %}
-      <img class="avatar" src="{{ person.photo | relative_url }}" alt="" width="96" height="96" loading="lazy">
-    {% else %}
-      {% assign clean = person.name | remove: "Dra. " | remove: "Dr. " | remove: "Dr " %}
-      {% assign parts = clean | split: " " %}
-      <span class="avatar avatar--initials" aria-hidden="true">{{ parts[0] | slice: 0 }}{{ parts[1] | slice: 0 }}</span>
-    {% endif %}
-    <h3>{{ person.name }}</h3>
-    <p class="role">{{ person.role }}</p>
-    <p class="aff">{{ person.affiliation }}</p>
-    {% if person.link and person.link != "" %}<a class="text-link" href="{{ person.link }}">{{ t.profile }}<span class="sr-only">: {{ person.name }}</span></a>{% endif %}
-  </li>
-  {% endfor %}
-</ul>
-<p class="note">{{ t.team_more }}</p>
+{% assign photos = site.static_files | where_exp: "f", "f.path contains '/assets/img/equipo/'" %}
+{% assign leads = site.data.team.people | where: "tier", "lead" | sort: "order" %}
+{% assign members = site.data.team.people | where_exp: "p", "p.tier != 'lead'" | sort: "sort" %}
+
+<section class="team-block" aria-labelledby="leads-title">
+  <h2 id="leads-title">{{ t.team_leads }}</h2>
+  <p class="team-block-intro">{{ t.team_leads_intro }}</p>
+  <ul class="leads-grid">
+    {% for p in leads %}{% include person-card.html p=p lang=lang variant="lead" photos=photos %}{% endfor %}
+  </ul>
+</section>
+
+<section class="team-block" aria-labelledby="members-title">
+  <h2 id="members-title">{{ t.team_members }}</h2>
+  <p class="team-block-intro">{{ t.team_members_intro }}</p>
+  <ul class="members-grid">
+    {% for p in members %}{% include person-card.html p=p lang=lang variant="member" photos=photos %}{% endfor %}
+  </ul>
+  <p class="note">{{ t.team_more }}</p>
+</section>
+
+{% for p in site.data.team.people %}{% include person-dialog.html p=p lang=lang photos=photos %}{% endfor %}
 {% else %}
 <div class="empty-state">
   <p class="empty-title">{{ t.under_construction }}</p>

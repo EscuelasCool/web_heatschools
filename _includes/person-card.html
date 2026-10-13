@@ -1,0 +1,21 @@
+{%- assign p = include.p -%}
+{%- assign lang = include.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign has = false -%}
+{%- if p.bio or p.interests or p.email or p.orcid or p.linkedin or p.website -%}{%- assign has = true -%}{%- endif -%}
+{%- assign ck = "country_" | append: p.country -%}
+{%- assign org = p.org | default: "" -%}
+<li class="person-card person-card--{{ include.variant }}{% unless has %} is-pending{% endunless %}">
+  {% if has %}<button type="button" class="person-hit" data-dialog="perfil-{{ p.id }}" aria-haspopup="dialog">{% else %}<div class="person-hit">{% endif %}
+    {% include person-avatar.html p=p photos=include.photos size=include.variant %}
+    <span class="person-text">
+      {% if include.variant == "lead" and p.country != "" %}<span class="person-country">{{ t[ck] }}</span>{% endif %}
+      <span class="person-name">{{ p.name }}</span>
+      {% if p.role %}<span class="person-role">{{ p.role[lang] }}</span>{% endif %}
+      {% capture meta %}{{ org }}{% if include.variant != "lead" and p.country != "" and t[ck] %}{% if org != "" %} · {% endif %}{{ t[ck] }}{% endif %}{% endcapture %}
+      {% assign meta = meta | strip %}
+      {% if meta != "" %}<span class="person-org">{{ meta }}</span>{% endif %}
+      {% if has %}<span class="person-more">{{ t.view_profile }}</span>{% else %}<span class="person-pending">{{ t.profile_soon }}</span>{% endif %}
+    </span>
+  {% if has %}</button>{% else %}</div>{% endif %}
+</li>

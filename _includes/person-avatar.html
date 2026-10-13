@@ -1,0 +1,10 @@
+{%- assign p = include.p -%}
+{%- assign photo = "" -%}
+{%- for f in include.photos -%}{%- if f.basename == p.id -%}{%- assign photo = f.path -%}{%- endif -%}{%- endfor -%}
+{%- if photo != "" -%}
+<img class="avatar avatar--{{ include.size }}" src="{{ photo | relative_url }}" alt="" loading="lazy">
+{%- else -%}
+{%- assign words = p.name | split: " " -%}{%- assign first = words[0] -%}
+{%- if first contains "." -%}{%- assign first = words[1] -%}{%- endif -%}
+<span class="avatar avatar--{{ include.size }} avatar--initials" aria-hidden="true">{{ first | slice: 0 }}{{ p.sort | slice: 0 | upcase }}</span>
+{%- endif -%}

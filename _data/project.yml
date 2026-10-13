@@ -10,7 +10,7 @@ host: "Universidad Peruana Cayetano Heredia"
 
 # Página de Equipo: false = muestra "Página en construcción".
 # Cambia a true cuando estén listas las fichas de todo el equipo.
-show_team: false
+show_team: true
 
 # Instituciones socias. "country" usa un código: PE, CL, CO, BR, INT (regional).
 partners:
