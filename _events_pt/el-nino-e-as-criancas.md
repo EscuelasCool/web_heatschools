@@ -16,27 +16,19 @@ specific_objectives:
   - "Identificar medidas viáveis para os próximos meses e prioridades estruturais para a próxima década."
 scope: "O webinar centra-se na população escolar e nas escolas como espaço de exposição, proteção e resposta. Aborda principalmente o calor extremo, sem ignorar que o El Niño também traz chuvas intensas, inundações e secas, dependendo da sub-região. Cobre dois horizontes: a temporada 2026-27 (encerramento do ano letivo e retorno às aulas) e o planejamento de médio e longo prazo (infraestrutura, gestão de riscos, sistemas de alerta, políticas intersetoriais). Não pretende ser uma capacitação clínica nem um protocolo técnico detalhado, mas um espaço de diálogo entre ciência, políticas públicas e prática escolar."
 agenda:
-  - min: 5
-    item: "Boas-vindas"
+  - item: "Boas-vindas"
     who: "Yasna Palmeiro, EscuelasCool"
-  - min: 5
-    item: "Um olhar do ORAS-CONHU: calor e saúde nos países andinos"
-    who: "A confirmar, ORAS-CONHU"
-  - min: 10
-    item: "Bloco 1: O que vem por aí?"
-    who: "Bárbara Tapia, OMM"
-  - min: 10
-    item: "Bloco 2: Por que importa? Saúde, bem-estar e aprendizagem"
+  - item: "Um olhar do ORAS-CONHU: calor e saúde nos países andinos"
+    who: "ORAS-CONHU"
+  - item: "Bloco 1: O que vem por aí?"
+    who: "Bárbara Tapia, Organização Meteorológica Mundial"
+  - item: "Bloco 2: Por que importa? Saúde, bem-estar e aprendizagem"
     who: "Yasna Palmeiro, EscuelasCool"
-  - min: 10
-    item: "Bloco 3: Um olhar a partir da prática"
-    who: "Representante de escolas da Colômbia"
-  - min: 25
-    item: "Bloco 4: Como nos preparamos?"
+  - item: "Bloco 3: Um olhar a partir da prática"
+    who: "Ruth Cerro, Rectora, Colegio Tierra Baja, Cartagena, Colombia"
+  - item: "Bloco 4: Como nos preparamos?"
     sub: ["Curto prazo", "Longo prazo"]
-    who: "Yasna Palmeiro · BID / Corporación Ciudades"
-  - min: 10
-    item: "Bloco 5: Perguntas do público"
-  - min: 5
-    item: "Encerramento"
+    who: "Yasna Palmeiro · Banco Interamericano de Desenvolvimento / Corporación Ciudades"
+  - item: "Bloco 5: Perguntas do público"
+  - item: "Encerramento"
 ---
