@@ -16,27 +16,19 @@ specific_objectives:
   - "Identificar medidas factibles para los próximos meses y prioridades estructurales para la próxima década."
 scope: "El conversatorio se centra en la población escolar y en las escuelas como espacio de exposición, protección y respuesta. Abarca principalmente el calor extremo, sin ignorar que El Niño también trae lluvias intensas, inundaciones y sequía según la subregión. Cubre dos horizontes: la temporada 2026-27 (cierre del año escolar y retorno a clases) y la planificación de mediano y largo plazo (infraestructura, gestión del riesgo, sistemas de alerta, políticas intersectoriales). No pretende ser una capacitación clínica ni un protocolo técnico detallado, sino un espacio de diálogo entre ciencia, política pública y práctica escolar."
 agenda:
-  - min: 5
-    item: "Bienvenida"
+  - item: "Bienvenida"
     who: "Yasna Palmeiro, EscuelasCool"
-  - min: 5
-    item: "Mirada desde ORAS-CONHU: calor y salud en países andinos"
-    who: "Por confirmar, ORAS-CONHU"
-  - min: 10
-    item: "Bloque 1: ¿Qué viene?"
-    who: "Bárbara Tapia, OMM"
-  - min: 10
-    item: "Bloque 2: ¿Por qué importa? Salud, bienestar y aprendizaje"
+  - item: "Mirada desde ORAS-CONHU: calor y salud en países andinos"
+    who: "ORAS-CONHU"
+  - item: "Bloque 1: ¿Qué viene?"
+    who: "Bárbara Tapia, Organización Meteorológica Mundial"
+  - item: "Bloque 2: ¿Por qué importa? Salud, bienestar y aprendizaje"
     who: "Yasna Palmeiro, EscuelasCool"
-  - min: 10
-    item: "Bloque 3: Mirada desde la práctica"
-    who: "Representante de colegios de Colombia"
-  - min: 25
-    item: "Bloque 4: ¿Cómo nos preparamos?"
+  - item: "Bloque 3: Mirada desde la práctica"
+    who: "Ruth Cerro, Rectora, Colegio Tierra Baja, Cartagena, Colombia"
+  - item: "Bloque 4: ¿Cómo nos preparamos?"
     sub: ["Corto plazo", "Largo plazo"]
-    who: "Yasna Palmeiro · BID / Corporación Ciudades"
-  - min: 10
-    item: "Bloque 5: Preguntas del público"
-  - min: 5
-    item: "Cierre"
+    who: "Yasna Palmeiro · Banco Interamericano de Desarrollo / Corporación Ciudades"
+  - item: "Bloque 5: Preguntas del público"
+  - item: "Cierre"
 ---
