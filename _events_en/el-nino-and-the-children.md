@@ -16,27 +16,19 @@ specific_objectives:
   - "Identify feasible measures for the coming months and structural priorities for the next decade."
 scope: "The webinar focuses on school populations and on schools as places of exposure, protection and response. It mainly covers extreme heat, while recognising that El Niño also brings heavy rainfall, flooding and drought depending on the subregion. It spans two horizons: the 2026–27 season (the end of the school year and the return to classes) and medium- and long-term planning (infrastructure, risk management, early warning systems, intersectoral policies). It is not intended as clinical training or a detailed technical protocol, but as a space for dialogue between science, public policy and school practice."
 agenda:
-  - min: 5
-    item: "Welcome"
+  - item: "Welcome"
     who: "Yasna Palmeiro, EscuelasCool"
-  - min: 5
-    item: "A view from ORAS-CONHU: heat and health in Andean countries"
-    who: "To be confirmed, ORAS-CONHU"
-  - min: 10
-    item: "Block 1: What is coming?"
-    who: "Bárbara Tapia, WMO"
-  - min: 10
-    item: "Block 2: Why does it matter? Health, wellbeing and learning"
+  - item: "A view from ORAS-CONHU: heat and health in Andean countries"
+    who: "ORAS-CONHU"
+  - item: "Block 1: What is coming?"
+    who: "Bárbara Tapia, World Meteorological Organization"
+  - item: "Block 2: Why does it matter? Health, wellbeing and learning"
     who: "Yasna Palmeiro, EscuelasCool"
-  - min: 10
-    item: "Block 3: A view from practice"
-    who: "Representative of schools in Colombia"
-  - min: 25
-    item: "Block 4: How do we prepare?"
+  - item: "Block 3: A view from practice"
+    who: "Ruth Cerro, Rectora, Colegio Tierra Baja, Cartagena, Colombia"
+  - item: "Block 4: How do we prepare?"
     sub: ["Short term", "Long term"]
-    who: "Yasna Palmeiro · IDB / Corporación Ciudades"
-  - min: 10
-    item: "Block 5: Questions from the audience"
-  - min: 5
-    item: "Closing"
+    who: "Yasna Palmeiro · Inter-American Development Bank / Corporación Ciudades"
+  - item: "Block 5: Questions from the audience"
+  - item: "Closing"
 ---
