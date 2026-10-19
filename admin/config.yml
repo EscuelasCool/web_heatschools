@@ -326,3 +326,96 @@ collections:
       - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
       - { label: "Autoria", name: author, widget: string, required: false }
       - { label: "Texto", name: body, widget: markdown }
+
+  - name: events_es
+    label: "Eventos · Español"
+    folder: "_events_es"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Subtítulo", name: subtitle, widget: string, required: false }
+      - { label: "Tipo (conversatorio, webinar…)", name: kind, widget: string, required: false }
+      - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Hora (texto)", name: time_text, widget: string, required: false }
+      - { label: "Duración", name: duration, widget: string, required: false }
+      - { label: "Formato", name: format, widget: string, required: false }
+      - { label: "Afiche o imagen", name: image, widget: image, required: false }
+      - { label: "Descripción de la imagen (accesibilidad)", name: image_alt, widget: string, required: false }
+      - { label: "Enlace de inscripción", name: registration_url, widget: string, required: false }
+      - { label: "Objetivo", name: objective, widget: text, required: false }
+      - { label: "Objetivos específicos", name: specific_objectives, widget: list, required: false }
+      - { label: "Alcance", name: scope, widget: text, required: false }
+      - label: "Agenda"
+        name: agenda
+        widget: list
+        required: false
+        summary: "{{fields.min}} min — {{fields.item}}"
+        fields:
+          - { label: "Minutos", name: min, widget: number, required: false }
+          - { label: "Contenido", name: item, widget: string }
+          - { label: "Sub-puntos", name: sub, widget: list, required: false }
+          - { label: "Presenta", name: who, widget: string, required: false }
+      - { label: "Texto adicional (opcional)", name: body, widget: markdown, required: false }
+
+  - name: events_en
+    label: "Events · English"
+    folder: "_events_en"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Subtítulo", name: subtitle, widget: string, required: false }
+      - { label: "Tipo (conversatorio, webinar…)", name: kind, widget: string, required: false }
+      - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Hora (texto)", name: time_text, widget: string, required: false }
+      - { label: "Duración", name: duration, widget: string, required: false }
+      - { label: "Formato", name: format, widget: string, required: false }
+      - { label: "Afiche o imagen", name: image, widget: image, required: false }
+      - { label: "Descripción de la imagen (accesibilidad)", name: image_alt, widget: string, required: false }
+      - { label: "Enlace de inscripción", name: registration_url, widget: string, required: false }
+      - { label: "Objetivo", name: objective, widget: text, required: false }
+      - { label: "Objetivos específicos", name: specific_objectives, widget: list, required: false }
+      - { label: "Alcance", name: scope, widget: text, required: false }
+      - label: "Agenda"
+        name: agenda
+        widget: list
+        required: false
+        summary: "{{fields.min}} min — {{fields.item}}"
+        fields:
+          - { label: "Minutos", name: min, widget: number, required: false }
+          - { label: "Contenido", name: item, widget: string }
+          - { label: "Sub-puntos", name: sub, widget: list, required: false }
+          - { label: "Presenta", name: who, widget: string, required: false }
+      - { label: "Texto adicional (opcional)", name: body, widget: markdown, required: false }
+
+  - name: events_pt
+    label: "Eventos · Português"
+    folder: "_events_pt"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Subtítulo", name: subtitle, widget: string, required: false }
+      - { label: "Tipo (conversatorio, webinar…)", name: kind, widget: string, required: false }
+      - { label: "Fecha", name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Hora (texto)", name: time_text, widget: string, required: false }
+      - { label: "Duración", name: duration, widget: string, required: false }
+      - { label: "Formato", name: format, widget: string, required: false }
+      - { label: "Afiche o imagen", name: image, widget: image, required: false }
+      - { label: "Descripción de la imagen (accesibilidad)", name: image_alt, widget: string, required: false }
+      - { label: "Enlace de inscripción", name: registration_url, widget: string, required: false }
+      - { label: "Objetivo", name: objective, widget: text, required: false }
+      - { label: "Objetivos específicos", name: specific_objectives, widget: list, required: false }
+      - { label: "Alcance", name: scope, widget: text, required: false }
+      - label: "Agenda"
+        name: agenda
+        widget: list
+        required: false
+        summary: "{{fields.min}} min — {{fields.item}}"
+        fields:
+          - { label: "Minutos", name: min, widget: number, required: false }
+          - { label: "Contenido", name: item, widget: string }
+          - { label: "Sub-puntos", name: sub, widget: list, required: false }
+          - { label: "Presenta", name: who, widget: string, required: false }
+      - { label: "Texto adicional (opcional)", name: body, widget: markdown, required: false }

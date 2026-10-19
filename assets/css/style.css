@@ -103,7 +103,7 @@ main:focus { outline: none; }
 .brand-name { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; letter-spacing: -.01em; }
 .brand:hover { color: var(--navy); }
 
-.site-nav { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
+.site-nav { display: flex; align-items: center; gap: 1.35rem; margin-left: auto; }
 .site-nav a {
   color: var(--navy); text-decoration: none;
   font-weight: 600; font-size: 1rem;
@@ -143,7 +143,7 @@ main:focus { outline: none; }
 .is-open .menu-bars::before { transform: translateY(6px) rotate(45deg); }
 .is-open .menu-bars::after  { transform: translateY(-6px) rotate(-45deg); }
 
-@media (max-width: 960px) {
+@media (max-width: 1060px) {
   .header-bar { gap: 1rem; }
   .lang-switch { margin-left: auto; }
   .menu-toggle { display: block; }
@@ -437,6 +437,57 @@ dialog.profile h3 { font-size: 1rem; margin: 1.6rem 0 .6rem; }
 .post .prose h2 { font-size: 1.45rem; margin: 2.2rem 0 .7rem; }
 .post .prose hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
 .post .prose .source { font-size: .98rem; color: var(--slate); }
+
+/* ------------------------------------------------------------
+   Eventos
+   ------------------------------------------------------------ */
+.btn-register {
+  display: inline-block; background: var(--orange-ink); color: #fff; text-decoration: none;
+  font-family: var(--font-head); font-weight: 800; font-size: 1.05rem;
+  padding: .8rem 1.6rem; border-radius: 999px; transition: background .15s;
+}
+.btn-register:hover { background: #A34200; color: #fff; }
+.btn-register--small { font-size: .92rem; padding: .5rem 1.1rem; }
+.badge-upcoming { color: var(--orange-ink); }
+.event-kind { margin: 0 0 .4rem; font-weight: 700; font-size: .95rem; color: var(--blue); }
+
+.event { padding-top: 2.5rem; padding-bottom: 4.5rem; }
+.event-top { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: start; }
+.event h1 { font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 900; margin-bottom: .5rem; }
+.event-subtitle { font-size: 1.25rem; line-height: 1.5; color: var(--slate); margin: 0 0 1.75rem; max-width: 40ch; }
+.event-facts { margin: 0 0 2rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.event-facts > div { background: var(--mist); border-radius: 12px; padding: .8rem 1rem; }
+.event-facts dt { font-size: .82rem; font-weight: 700; color: var(--slate); }
+.event-facts dd { margin: .1rem 0 0; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.event-poster img { display: block; width: 100%; border-radius: var(--radius); box-shadow: 0 14px 36px rgba(2, 49, 85, .16); }
+.event-body { max-width: 780px; margin-top: 3rem; }
+.event-body section + section { margin-top: 2.25rem; }
+.event-body h2 { font-size: 1.5rem; margin-bottom: .7rem; }
+.event-body p { margin: 0; line-height: 1.75; font-size: 1.08rem; }
+.event-objectives { margin: 0; padding-left: 1.3rem; display: grid; gap: .5rem; font-size: 1.08rem; line-height: 1.65; }
+.table-scroll { overflow-x: auto; }
+.agenda { width: 100%; border-collapse: collapse; font-size: 1rem; min-width: 520px; }
+.agenda th { text-align: left; font-size: .85rem; color: var(--slate); font-weight: 700; padding: .6rem .8rem; border-bottom: 2px solid var(--navy); }
+.agenda td { padding: .85rem .8rem; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.5; }
+.agenda td ul { margin: .35rem 0 0; padding-left: 1.1rem; color: var(--slate); }
+.agenda-min { font-family: var(--font-head); font-weight: 800; color: var(--blue); width: 4rem; }
+.agenda-who { color: var(--slate); width: 34%; }
+.event-cta { margin-top: 2.5rem !important; }
+@media (max-width: 860px) {
+  .event-top { grid-template-columns: 1fr; gap: 2rem; }
+  .event-poster { max-width: 420px; }
+}
+@media (max-width: 480px) { .event-facts { grid-template-columns: 1fr; } }
+
+.events-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.event-card { display: grid; grid-template-columns: 180px 1fr; gap: 1.75rem; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; align-items: center; }
+.event-card-img img { display: block; width: 100%; border-radius: 10px; }
+.event-card h3 { font-size: 1.4rem; margin-bottom: .3rem; }
+.event-card h3 a { color: var(--navy); text-decoration: none; }
+.event-card h3 a:hover { color: var(--orange-ink); text-decoration: underline; }
+.event-card-sub { margin: 0 0 .5rem; color: var(--slate); }
+.event-card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: .9rem; }
+@media (max-width: 620px) { .event-card { grid-template-columns: 1fr; } .event-card-img { max-width: 220px; } }
 
 /* ------------------------------------------------------------
    Pie de página

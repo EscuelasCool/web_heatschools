@@ -1,0 +1,26 @@
+{% assign t = site.data.i18n[include.lang] %}
+{% assign coll = "events_" | append: include.lang %}
+{% assign items = site[coll] | sort: "date" | reverse %}
+{% assign now = site.time | date: "%Y%m%d" | plus: 0 %}
+{% if items.size > 0 %}
+<ul class="events-list">
+  {% for ev in items %}
+  {% assign day = ev.date | date: "%Y%m%d" | plus: 0 %}
+  <li class="event-card">
+    {% if ev.image %}<a class="event-card-img" href="{{ ev.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ ev.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+    <div class="event-card-text">
+      <p class="event-kind">{{ ev.kind }} · {% if day >= now %}<span class="badge-upcoming">{{ t.upcoming }}</span>{% else %}{{ t.past_event }}{% endif %}</p>
+      <h3><a href="{{ ev.url | relative_url }}">{{ ev.title }}</a></h3>
+      {% if ev.subtitle %}<p class="event-card-sub">{{ ev.subtitle }}</p>{% endif %}
+      <p class="news-date">{% include date.html date=ev.date lang=include.lang %}{% if ev.time_text %} · {{ ev.time_text }}{% endif %}</p>
+      <div class="event-card-actions">
+        <a class="text-link" href="{{ ev.url | relative_url }}">{{ t.view_event }}<span class="sr-only">: {{ ev.title }}</span></a>
+        {% if ev.registration_url and day >= now %}<a class="btn-register btn-register--small" href="{{ ev.registration_url }}" rel="noopener">{{ t.register }}</a>{% endif %}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="muted">{{ t.no_events }}</p>
+{% endif %}

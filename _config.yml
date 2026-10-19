@@ -39,6 +39,15 @@ collections:
   notes_pt:
     output: true
     permalink: /pt/publicacoes/:name/
+  events_es:
+    output: true
+    permalink: /eventos/:name/
+  events_en:
+    output: true
+    permalink: /en/events/:name/
+  events_pt:
+    output: true
+    permalink: /pt/eventos/:name/
   team:
     output: false
   publications:
@@ -58,8 +67,16 @@ defaults:
     values: { layout: "post", lang: "en", ref: "pubs" }
   - scope: { path: "", type: "notes_pt" }
     values: { layout: "post", lang: "pt", ref: "pubs" }
+  - scope: { path: "", type: "events_es" }
+    values: { layout: "event", lang: "es", ref: "events" }
+  - scope: { path: "", type: "events_en" }
+    values: { layout: "event", lang: "en", ref: "events" }
+  - scope: { path: "", type: "events_pt" }
+    values: { layout: "event", lang: "pt", ref: "events" }
 
 # --- Build ---
+# future: true permite publicar eventos con fecha futura.
+future: true
 markdown: kramdown
 exclude:
   - README.md

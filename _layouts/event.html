@@ -1,0 +1,84 @@
+---
+layout: base
+---
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.i18n[lang] %}
+{% assign now = site.time | date: "%Y%m%d" | plus: 0 %}
+{% assign day = page.date | date: "%Y%m%d" | plus: 0 %}
+<article class="container event">
+  <a class="text-link text-link--back" href="{{ t.url_events | relative_url }}">{{ t.back_events }}</a>
+
+  <div class="event-top">
+    <div class="event-intro">
+      <p class="event-kind">{{ page.kind }}{% if day >= now %} · <span class="badge-upcoming">{{ t.upcoming }}</span>{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="event-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+      <dl class="event-facts">
+        <div><dt>{{ t.ev_date }}</dt><dd>{% include date.html date=page.date lang=lang %}</dd></div>
+        {% if page.time_text %}<div><dt>{{ t.ev_time }}</dt><dd>{{ page.time_text }}</dd></div>{% endif %}
+        {% if page.duration %}<div><dt>{{ t.ev_duration }}</dt><dd>{{ page.duration }}</dd></div>{% endif %}
+        {% if page.format %}<div><dt>{{ t.ev_format }}</dt><dd>{{ page.format }}</dd></div>{% endif %}
+      </dl>
+
+      {% if page.registration_url and day >= now %}
+      <a class="btn-register" href="{{ page.registration_url }}" rel="noopener">{{ t.register }}</a>
+      {% endif %}
+    </div>
+
+    {% if page.image %}
+    <a class="event-poster" href="{{ page.image | relative_url }}">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="1200" height="1500">
+    </a>
+    {% endif %}
+  </div>
+
+  <div class="event-body">
+    {% if page.objective %}
+    <section>
+      <h2>{{ t.ev_objective }}</h2>
+      <p>{{ page.objective }}</p>
+    </section>
+    {% endif %}
+
+    {% if page.specific_objectives %}
+    <section>
+      <h2>{{ t.ev_specific }}</h2>
+      <ol class="event-objectives">{% for o in page.specific_objectives %}<li>{{ o }}</li>{% endfor %}</ol>
+    </section>
+    {% endif %}
+
+    {% if page.scope %}
+    <section>
+      <h2>{{ t.ev_scope }}</h2>
+      <p>{{ page.scope }}</p>
+    </section>
+    {% endif %}
+
+    {% if page.agenda %}
+    <section>
+      <h2>{{ t.ev_agenda }}</h2>
+      <div class="table-scroll">
+        <table class="agenda">
+          <thead><tr><th scope="col">{{ t.ev_min }}</th><th scope="col">{{ t.ev_content }}</th><th scope="col">{{ t.ev_who }}</th></tr></thead>
+          <tbody>
+            {% for a in page.agenda %}
+            <tr>
+              <td class="agenda-min">{{ a.min }}</td>
+              <td>{{ a.item }}{% if a.sub %}<ul>{% for s in a.sub %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}</td>
+              <td class="agenda-who">{{ a.who }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.registration_url and day >= now %}
+    <p class="event-cta"><a class="btn-register" href="{{ page.registration_url }}" rel="noopener">{{ t.register }}</a></p>
+    {% endif %}
+  </div>
+</article>
