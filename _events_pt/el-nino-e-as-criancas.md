@@ -29,9 +29,7 @@ agenda:
   - item: "Bloco 4: Como nos preparamos?"
     sub: ["Curto prazo", "Longo prazo"]
     who:
-    - "Carlos Delgado, DIRESA Madre de Dios"
-    - "Maria Soledad Bos, Banco Interamericano de Desenvolvimento "
-    - "Martín Andrade, Corporación Ciudades"
+    - "Carlos Delgado, DIRESA Madre de Dios · Maria Soledad Bos, Banco Interamericano de Desenvolvimento · Martín Andrade, Corporación Ciudades"
   - item: "Bloco 5: Perguntas do público"
   - item: "Encerramento"
 ---
