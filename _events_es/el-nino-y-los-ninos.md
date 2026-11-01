@@ -30,7 +30,7 @@ agenda:
     sub: ["Corto plazo", "Largo plazo"]
     who:
     - "Carlos Delgado, DIRESA Madre de Dios"
-    - "Maria Soledad Bos, Inter-American Development Bank"
+    - "Maria Soledad Bos, Banco Interamericano de Desarrollo"
     - "Martín Andrade, Corporación Ciudades"
   - item: "Bloque 5: Preguntas del público"
   - item: "Cierre"
