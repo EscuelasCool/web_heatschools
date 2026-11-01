@@ -28,9 +28,10 @@ agenda:
     who: "Ruth Cerro, Rectora, Colegio Tierra Baja, Cartagena, Colombia"
   - item: "Block 4: How do we prepare?"
     sub: ["Short term", "Long term"]
-    who: "Carlos Delgado, DIRESA Madre de Dios"
-    who: "Maria Soledad Bos, Inter-American Development Bank"
-    who: "Martín Andrade, Corporación Ciudades"
+    who:
+    - "Carlos Delgado, DIRESA Madre de Dios"
+    - "Maria Soledad Bos, Inter-American Development Bank"
+    - "Martín Andrade, Corporación Ciudades"
   - item: "Block 5: Questions from the audience"
   - item: "Closing"
 ---
