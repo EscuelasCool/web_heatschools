@@ -19,7 +19,7 @@ agenda:
   - item: "Welcome"
     who: "Yasna Palmeiro, EscuelasCool"
   - item: "A view from ORAS-CONHU: heat and health in Andean countries"
-    who: "ORAS-CONHU"
+    who: "Dr. Fernando Araos, ORAS-CONHU"
   - item: "Block 1: What is coming?"
     who: "Bárbara Tapia, World Meteorological Organization"
   - item: "Block 2: Why does it matter? Health, wellbeing and learning"
@@ -28,7 +28,9 @@ agenda:
     who: "Ruth Cerro, Rectora, Colegio Tierra Baja, Cartagena, Colombia"
   - item: "Block 4: How do we prepare?"
     sub: ["Short term", "Long term"]
-    who: "Yasna Palmeiro · Inter-American Development Bank / Corporación Ciudades"
+    who: "Carlos Delgado, DIRESA Madre de Dios"
+    who: "Maria Soledad Bos, Inter-American Development Bank"
+    who: "Martín Andrade, Corporación Ciudades"
   - item: "Block 5: Questions from the audience"
   - item: "Closing"
 ---
